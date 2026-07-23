@@ -1,15 +1,10 @@
-export default async function Invitation({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
+import BookInvitation from "@/components/invitation/BookInvitation"
 
-  const { slug } = await params
+
+export default function Home() {
 
   return (
-    <main>
-      <h1>Invitación de boda</h1>
-      <p>Pareja: {slug}</p>
-    </main>
+    <BookInvitation />
   )
+
 }
