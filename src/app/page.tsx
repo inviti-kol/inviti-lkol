@@ -40,7 +40,7 @@ export default function Home() {
           font-serif
           tracking-widest
         ">
-          InvitiKol
+          Inviti.Kol
         </h1>
 
 
