@@ -25,12 +25,14 @@ export default function BookInvitation() {
     <main
 
       className="
-        min-h-screen
+        w-full
+        min-h-[100dvh]
         flex
         items-center
         justify-center
         bg-[#efe6d6]
         overflow-hidden
+        p-4
       "
 
     >
@@ -42,8 +44,9 @@ export default function BookInvitation() {
 
         className="
           relative
-          w-[330px]
-          h-[554px]
+          w-[90vw]
+          max-w-[700px]
+          aspect-[330/554]
           cursor-pointer
           select-none
         "
@@ -55,11 +58,9 @@ export default function BookInvitation() {
       >
 
 
-
         {/* ============================= */}
         {/* PÁGINAS */}
         {/* ============================= */}
-
 
         <AnimatePresence>
 
@@ -99,8 +100,6 @@ export default function BookInvitation() {
 
 
 
-
-
         {/* ============================= */}
         {/* PORTADA IZQUIERDA */}
         {/* ============================= */}
@@ -112,8 +111,8 @@ export default function BookInvitation() {
             absolute
             left-0
             top-0
-            w-[165px]
-            h-[554px]
+            w-1/2
+            h-full
             rounded-l-lg
             bg-cover
             bg-center
@@ -163,8 +162,8 @@ export default function BookInvitation() {
             absolute
             right-0
             top-0
-            w-[165px]
-            h-[554px]
+            w-1/2
+            h-full
             rounded-r-lg
             bg-cover
             bg-center
