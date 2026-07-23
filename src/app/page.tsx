@@ -1,10 +1,7 @@
-import BookInvitation from "@/components/invitation/BookInvitation"
-
+import { redirect } from "next/navigation"
 
 export default function Home() {
 
-  return (
-    <BookInvitation />
-  )
+  return null
 
 }
