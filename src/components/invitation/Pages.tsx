@@ -19,7 +19,7 @@ export default function Pages() {
 
       className="
         w-full
-        h-screen
+        h-full
         overflow-y-auto
         snap-y
         snap-mandatory
@@ -33,7 +33,7 @@ export default function Pages() {
         className="
           relative
           w-full
-          min-h-screen
+          min-h-full
           snap-start
           overflow-hidden
           flex
@@ -51,13 +51,18 @@ export default function Pages() {
         <Background />
 
 
-        <div className="
-          relative
-          z-10
-          flex
-          flex-col
-          items-center
-        ">
+        <div
+
+          className="
+            relative
+            z-10
+            flex
+            flex-col
+            items-center
+            w-full
+          "
+
+        >
 
 
           <Basmala />
@@ -88,7 +93,7 @@ export default function Pages() {
         className="
           relative
           w-full
-          min-h-screen
+          min-h-full
           snap-start
           overflow-hidden
         "
@@ -103,20 +108,31 @@ export default function Pages() {
 
 
       </section>
-<section
-  className="
-    relative
-    w-full
-    min-h-screen
-    snap-start
-  "
->
 
-  <Plan />
 
-  <ScrollHint />
 
-</section>
+
+
+      <section
+
+        className="
+          relative
+          w-full
+          min-h-full
+          snap-start
+        "
+
+      >
+
+
+        <Plan />
+
+
+        <ScrollHint />
+
+
+      </section>
+
 
     </div>
 
