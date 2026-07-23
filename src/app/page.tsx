@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { Sparkles, X } from "lucide-react"
+import { FaInstagram, FaWhatsapp } from "react-icons/fa"
 
 export default function Home() {
 
@@ -11,49 +13,122 @@ export default function Home() {
 
       <section className="max-w-3xl text-center">
 
-        <h1 className="text-5xl md:text-6xl font-serif">
+        <div className="flex justify-center mb-6">
+          <Sparkles 
+            size={45}
+            className="text-[#d9b98c]"
+          />
+        </div>
+
+
+        <h1 className="text-6xl font-serif tracking-widest">
           InvitiKol
         </h1>
 
-        <p className="mt-4 text-[#d9b98c] text-xl" dir="rtl">
+
+        <p
+          className="mt-5 text-[#d9b98c] text-2xl font-serif"
+          dir="rtl"
+        >
           دعوات رقمية بتصميم خاص لكل مناسبة
         </p>
 
 
-        <div className="mt-8 border border-[#d9b98c]/40 rounded-3xl p-8 bg-white/5">
+        <div className="
+          mt-10
+          border border-[#d9b98c]/40
+          rounded-[2rem]
+          p-10
+          bg-white/5
+          backdrop-blur
+          shadow-xl
+        ">
 
-          <p className="text-2xl leading-loose" dir="rtl">
+
+          <p
+            className="
+            text-3xl
+            leading-loose
+            font-serif
+            "
+            dir="rtl"
+          >
             هل تبحث عن دعوة إلكترونية مميزة تجمع بين الأناقة والإبداع؟
             <br />
             نصمم لك دعوة رقمية خاصة تناسب جميع مناسباتك وتخلّد أجمل لحظاتك.
           </p>
 
-<div
-            className="mt-6 text-lg text-gray-200 space-y-2"
+
+          <div
+            className="mt-8 text-lg text-gray-200 space-y-3 font-serif"
             dir="rtl"
           >
-            <p>حفلات الزفاف</p>
-            <p>أعياد الميلاد</p>
-            <p>المناسبات العائلية</p>
-            <p>كل أنواع الاحتفالات</p>
+            <p>✦ حفلات الزفاف</p>
+            <p>✦ أعياد الميلاد</p>
+            <p>✦ المناسبات العائلية</p>
+            <p>✦ جميع أنواع الاحتفالات</p>
           </div>
+
 
           <button
             onClick={() => setOpen(true)}
-            className="mt-8 px-8 py-3 rounded-full bg-[#d9b98c] text-[#1a0f12]"
+            className="
+            mt-10
+            px-10
+            py-4
+            rounded-full
+            bg-[#d9b98c]
+            text-[#1a0f12]
+            font-serif
+            text-lg
+            hover:scale-105
+            transition
+            "
           >
             اطلب دعوتك الآن
           </button>
+
 
         </div>
 
 
         {open && (
-          <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
 
-            <div className="bg-[#1a0f12] border border-[#d9b98c]/40 rounded-3xl p-8 w-80">
+          <div className="
+          fixed
+          inset-0
+          bg-black/70
+          flex
+          items-center
+          justify-center
+          px-5
+          ">
 
-              <h2 className="text-xl mb-6" dir="rtl">
+
+            <div className="
+            bg-[#1a0f12]
+            border
+            border-[#d9b98c]/40
+            rounded-[2rem]
+            p-8
+            w-full
+            max-w-sm
+            relative
+            ">
+
+
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute top-5 right-5 text-gray-400"
+              >
+                <X size={22}/>
+              </button>
+
+
+              <h2
+                className="text-2xl font-serif mb-8"
+                dir="rtl"
+              >
                 تواصل معنا
               </h2>
 
@@ -61,8 +136,19 @@ export default function Home() {
               <a
                 href="https://instagram.com/اسم_الحساب"
                 target="_blank"
-                className="block mb-4 py-3 rounded-full bg-white/10"
+                className="
+                flex
+                items-center
+                justify-center
+                gap-3
+                py-4
+                rounded-full
+                bg-white/10
+                hover:bg-white/20
+                transition
+                "
               >
+                <FaInstagram size={22}/>
                 Instagram
               </a>
 
@@ -70,22 +156,28 @@ export default function Home() {
               <a
                 href="https://wa.me/رقمك"
                 target="_blank"
-                className="block py-3 rounded-full bg-white/10"
+                className="
+                mt-4
+                flex
+                items-center
+                justify-center
+                gap-3
+                py-4
+                rounded-full
+                bg-white/10
+                hover:bg-white/20
+                transition
+                "
               >
+                <FaWhatsapp size={22}/>
                 WhatsApp
               </a>
 
 
-              <button
-                onClick={() => setOpen(false)}
-                className="mt-6 text-sm text-gray-400"
-              >
-                إغلاق
-              </button>
-
             </div>
 
           </div>
+
         )}
 
       </section>
