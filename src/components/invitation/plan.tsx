@@ -19,7 +19,7 @@ export default function Plan() {
     {
       date:"13 / 7 / 2026",
       title:"عقد القران",
-      place:"جامع ابن عرفة",
+      place:"بقاعة افراح",
       hour:"بعد صلاة العصر",
       map: "https://maps.google.com/?q=33.870778,10.100361",
       icon:"contract",
@@ -28,7 +28,7 @@ export default function Plan() {
 
     {
       date:"14 / 7 / 2026",
-      title:"مأدبة العشاء",
+      title:"مأدبة عشاء العريس",
       place:"بقاعة افراح",
       hour:"5:00 PM",
       icon:"food",
@@ -37,7 +37,7 @@ export default function Plan() {
 
     {
       date:"14 / 7 / 2026",
-      title:"مأدبة العشاء",
+      title:"مأدبة عشاء العروسة",
       place:"بقاعة افراح",
       hour:"5:00 PM",
       icon:"food",
@@ -52,14 +52,21 @@ export default function Plan() {
       icon:"henna",
       side:"left",
     },
-
+{
+      date:"14 / 7 / 2026",
+      title:"حنة العروسة",
+      place:"بقاعة افراح",
+      hour:"8:00 PM",
+      icon:"henna",
+      side:"right",
+    },
     {
       date:"15 / 7 / 2026",
       title:"حفل الزفاف",
-      place:"فضاء عنتر دار الزمان",
+      place:"بقاعة افراح",
       hour:"9:00 PM",
-      icon:"wedding",
-      side:"right",
+      icon:"henna",
+      side:"left",
     },
 
   ]
