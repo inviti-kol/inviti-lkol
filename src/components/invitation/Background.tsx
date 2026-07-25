@@ -3,24 +3,36 @@
 import { motion } from "framer-motion"
 import { useMemo } from "react"
 
+
 export default function Background() {
 
-  const petals = useMemo(() => {
 
-    return Array.from({ length: 20 }).map(() => ({
-      width: 8 + Math.random() * 8,
-      height: 12 + Math.random() * 10,
-      left: Math.random() * 100,
-      duration: 8 + Math.random() * 5,
-      delay: Math.random() * 5,
+  const petals = useMemo(()=>{
+
+    return Array.from({length:25}).map(()=>({
+
+      width:6 + Math.random()*8,
+
+      height:10 + Math.random()*12,
+
+      left:Math.random()*100,
+
+      duration:10 + Math.random()*8,
+
+      delay:Math.random()*8
+
     }))
 
-  }, [])
+
+  },[])
+
 
 
   return (
 
+
     <div
+
       className="
         absolute
         inset-0
@@ -28,12 +40,16 @@ export default function Background() {
         pointer-events-none
         z-0
       "
+
     >
 
 
-      {/* Fondo */}
+
+      {/* FOTO DE FONDO */}
+
 
       <motion.div
+
 
         className="
           absolute
@@ -42,114 +58,182 @@ export default function Background() {
           bg-center
         "
 
+
         style={{
-          backgroundImage:"url('/images/bg.jpg')",
+
+          backgroundImage:
+          "url('/images/bg.jpg')"
+
         }}
+
 
         animate={{
-          scale:[1,1.15,1],
+
+          scale:[1,1.08,1]
+
         }}
 
+
         transition={{
-          duration:18,
+
+          duration:25,
+
           repeat:Infinity,
+
           repeatType:"reverse",
-          ease:"easeInOut",
+
+          ease:"easeInOut"
+
         }}
+
 
       />
 
 
-      {/* Capa gris transparente */}
+
+
+
+      {/* TONO CREMA */}
+
 
       <div
+
         className="
           absolute
           inset-0
-          bg-black/10
+          bg-black/35
         "
+
       />
 
 
-      {/* Pétalos */}
+
+
+
+
+      {/* PETALOS */}
+
 
       {
-        petals.map((petal,i)=>(
+
+        petals.map((petal,index)=>(
+
 
           <motion.div
 
-            key={i}
+
+            key={index}
+
 
             className="
               absolute
               rounded-tl-full
               rounded-br-full
-              bg-[#f8eedb]
+              bg-[#f3dfc0]
             "
+
 
             style={{
 
+
               width:`${petal.width}px`,
+
 
               height:`${petal.height}px`,
 
-              left:`${petal.left}%`,
+
+              left:`${petal.left}%`
+
 
             }}
 
 
             initial={{
-              y:-30,
+
+              y:-50,
+
               rotate:0,
-              opacity:0,
+
+              opacity:0
+
             }}
+
 
 
             animate={{
 
-              y:700,
+
+              y:"110vh",
+
 
               x:[
+
                 0,
-                30,
-                -20,
-                10
+
+                40,
+
+                -30,
+
+                20
+
               ],
+
 
               rotate:[
+
                 0,
+
                 180,
+
                 360
+
               ],
 
+
               opacity:[
+
                 0,
-                0.8,
+
+                .45,
+
                 0
+
               ]
 
             }}
 
 
+
             transition={{
+
 
               duration:petal.duration,
 
+
               delay:petal.delay,
+
 
               repeat:Infinity,
 
-              ease:"linear",
+
+              ease:"linear"
+
 
             }}
 
+
+
           />
 
+
         ))
+
+
       }
 
 
     </div>
+
 
   )
 

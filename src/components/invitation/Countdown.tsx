@@ -133,7 +133,7 @@ export default function Countdown() {
         py-12
         bg-cover
         bg-center
-        min-h-[600px]
+        h-full
       "
 
 

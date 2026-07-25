@@ -10,29 +10,37 @@ import ScrollHint from "./ScrollHint"
 import Background from "./Background"
 import Plan from "./plan"
 
+
 export default function Pages() {
 
 
   return (
 
+
     <div
 
       className="
-        w-full
-        h-full
+        absolute
+        inset-0
         overflow-y-auto
         snap-y
         snap-mandatory
+        scroll-smooth
       "
 
     >
+
+
+
+
+
+      {/* INTRO */}
 
 
       <section
 
         className="
           relative
-          w-full
           min-h-full
           snap-start
           overflow-hidden
@@ -41,14 +49,18 @@ export default function Pages() {
           items-center
           text-center
           px-7
-          py-0
+          pt-10
+          pb-16
           text-[#3d2020]
         "
+
+        dir="rtl"
 
       >
 
 
         <Background />
+
 
 
         <div
@@ -67,16 +79,21 @@ export default function Pages() {
 
           <Basmala />
 
+
           <Verse />
+
 
           <InvitationText />
 
+
           <Families />
+
 
           <CouplesName />
 
 
         </div>
+
 
 
         <ScrollHint />
@@ -88,15 +105,21 @@ export default function Pages() {
 
 
 
+
+
+
+      {/* COUNTDOWN */}
+
+
       <section
 
         className="
           relative
-          w-full
           min-h-full
           snap-start
-          overflow-hidden
         "
+
+        dir="rtl"
 
       >
 
@@ -113,14 +136,22 @@ export default function Pages() {
 
 
 
+
+
+
+
+      {/* PROGRAMME */}
+
+
       <section
 
         className="
           relative
-          w-full
           min-h-full
           snap-start
         "
+
+        dir="rtl"
 
       >
 
@@ -134,7 +165,11 @@ export default function Pages() {
       </section>
 
 
+
+
+
     </div>
+
 
   )
 

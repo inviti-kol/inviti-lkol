@@ -4,18 +4,17 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Pages from "./Pages"
 
+
 export default function BookInvitation() {
 
   const [open, setOpen] = useState(false)
-  const [pagesVisible, setPagesVisible] = useState(false)
 
 
   function openBook() {
 
-    if (open) return
+    if(open) return
 
     setOpen(true)
-    setPagesVisible(true)
 
   }
 
@@ -25,14 +24,14 @@ export default function BookInvitation() {
     <main
 
       className="
+        min-h-dvh
         w-full
-        min-h-[100dvh]
         flex
         items-center
         justify-center
         bg-[#efe6d6]
+        p-6
         overflow-hidden
-        p-4
       "
 
     >
@@ -40,176 +39,228 @@ export default function BookInvitation() {
 
       <div
 
-        onClick={openBook}
-
         className="
           relative
-          w-[90vw]
-          max-w-[700px]
-          aspect-[330/554]
-          cursor-pointer
-          select-none
+          rounded-[36px]
+          bg-[#faf7f1]
+          shadow-[0_30px_100px_rgba(0,0,0,0.25)]
+          border
+          border-[#e7dcc5]
+          p-5
+          md:p-8
         "
-
-        style={{
-          perspective:"1800px"
-        }}
 
       >
 
 
-        {/* ============================= */}
-        {/* PÁGINAS */}
-        {/* ============================= */}
+        <div
 
-        <AnimatePresence>
-
-          {pagesVisible && (
-
-            <motion.div
-
-              className="
-                absolute
-                inset-0
-                z-10
-              "
-
-              initial={{
-                opacity:0,
-                scale:0.98
-              }}
-
-              animate={{
-                opacity:1,
-                scale:1
-              }}
-
-              transition={{
-                duration:0.3
-              }}
-
-            >
-
-              <Pages />
-
-            </motion.div>
-
-          )}
-
-        </AnimatePresence>
-
-
-
-        {/* ============================= */}
-        {/* PORTADA IZQUIERDA */}
-        {/* ============================= */}
-
-
-        <motion.div
+          onClick={openBook}
 
           className="
-            absolute
-            left-0
-            top-0
-            w-1/2
-            h-full
-            rounded-l-lg
-            bg-cover
-            bg-center
-            shadow-2xl
-            origin-left
-            z-20
+            relative
+            w-[92vw]
+            max-w-[560px]
+            aspect-[330/554]
+            cursor-pointer
+            select-none
           "
 
           style={{
-
-            backgroundImage:"url('/images/left.jpg')",
-
-            transformStyle:"preserve-3d",
-
-            backfaceVisibility:"hidden"
-
-          }}
-
-          animate={{
-
-            rotateY: open ? -90 : 0
-
-          }}
-
-          transition={{
-
-            duration:1,
-
-            ease:"easeInOut"
-
-          }}
-
-        />
-
-
-
-
-
-        {/* ============================= */}
-        {/* PORTADA DERECHA */}
-        {/* ============================= */}
-
-
-        <motion.div
-
-          className="
-            absolute
-            right-0
-            top-0
-            w-1/2
-            h-full
-            rounded-r-lg
-            bg-cover
-            bg-center
-            shadow-2xl
-            origin-right
-            z-30
-          "
-
-          style={{
-
-            backgroundImage:"url('/images/right.jpg')",
-
-            transformStyle:"preserve-3d",
-
-            backfaceVisibility:"hidden"
-
-          }}
-
-          animate={{
-
-            rotateY: open ? 90 : 0
-
-          }}
-
-          transition={{
-
-            duration:1,
-
-            ease:"easeInOut"
-
+            perspective:"2200px"
           }}
 
         >
 
 
 
-          {/* ============================= */}
+          {/* CONTENIDO INTERIOR */}
+
+
+          <AnimatePresence>
+
+
+          {open &&
+
+          <motion.div
+
+            className="
+              absolute
+              inset-0
+              z-10
+              rounded-xl
+              overflow-hidden
+              bg-[#faf7f1]
+            "
+
+
+            initial={{
+              opacity:0,
+              scale:.96
+            }}
+
+
+            animate={{
+              opacity:1,
+              scale:1
+            }}
+
+
+            transition={{
+              duration:.8
+            }}
+
+          >
+
+            <Pages />
+
+          </motion.div>
+
+          }
+
+
+          </AnimatePresence>
+
+
+
+
+
+          {/* TAPA IZQUIERDA */}
+
+
+          <motion.div
+
+
+            className="
+              absolute
+              left-0
+              top-0
+              w-1/2
+              h-full
+              rounded-l-xl
+              bg-cover
+              bg-center
+              shadow-2xl
+              origin-left
+              z-20
+            "
+
+
+            style={{
+
+              backgroundImage:
+              "url('/images/left.jpg')",
+
+              transformStyle:
+              "preserve-3d",
+
+              backfaceVisibility:
+              "hidden"
+
+            }}
+
+
+            animate={{
+
+              rotateY:
+              open ? -100 : 0,
+
+              opacity:
+              open ? 0 : 1
+
+            }}
+
+
+            transition={{
+
+              duration:1.2,
+
+              ease:"easeInOut"
+
+            }}
+
+
+          />
+
+
+
+
+
+
+
+          {/* TAPA DERECHA */}
+
+
+          <motion.div
+
+
+            className="
+              absolute
+              right-0
+              top-0
+              w-1/2
+              h-full
+              rounded-r-xl
+              bg-cover
+              bg-center
+              shadow-2xl
+              origin-right
+              z-30
+            "
+
+
+            style={{
+
+              backgroundImage:
+              "url('/images/right.jpg')",
+
+              transformStyle:
+              "preserve-3d",
+
+              backfaceVisibility:
+              "hidden"
+
+            }}
+
+
+            animate={{
+
+              rotateY:
+              open ? 100 : 0,
+
+              opacity:
+              open ? 0 : 1
+
+            }}
+
+
+            transition={{
+
+              duration:1.2,
+
+              ease:"easeInOut"
+
+            }}
+
+
+
+          >
+
+
+
+
+
           {/* SELLO */}
-          {/* ============================= */}
 
 
           <motion.img
 
+
             src="/images/seal.webp"
 
-            alt="Seal"
+
+            alt="seal"
+
 
             className="
               absolute
@@ -220,8 +271,8 @@ export default function BookInvitation() {
               -translate-x-1/2
               -translate-y-1/2
               z-40
-              pointer-events-none
             "
+
 
             animate={
 
@@ -231,13 +282,14 @@ export default function BookInvitation() {
 
               {
 
-                scale:[1,1.08,1],
+                scale:[1,1.15,0],
 
-                y:[0,-18,-18],
+                y:[0,-20,-40],
 
                 opacity:[1,1,0]
 
               }
+
 
               :
 
@@ -256,18 +308,21 @@ export default function BookInvitation() {
 
             transition={{
 
-              duration:0.8,
-
-              times:[0,0.4,1],
-
-              ease:"easeInOut"
+              duration:.9
 
             }}
+
 
           />
 
 
-        </motion.div>
+
+
+          </motion.div>
+
+
+
+        </div>
 
 
       </div>
