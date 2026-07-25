@@ -5,20 +5,28 @@ import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Plan() {
 
-  const { scrollYProgress } = useScroll()
+  const timelineRef = useRef<HTMLDivElement>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: [
+      "start 80%",
+      "end 20%"
+    ],
+  })
 
 
   const flowerPosition = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, 650]
+    [0, 450]
   )
 
 
   const flowerRotation = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, 180]
+    [0, 360]
   )
 
 
@@ -101,7 +109,10 @@ export default function Plan() {
 
 
 
-        <div className="relative">
+        <div
+          ref={timelineRef}
+          className="relative"
+        >
 
 
           <div
@@ -117,9 +128,13 @@ export default function Plan() {
           />
 
 
+
           <motion.img
+
             src="/images/flower-decor.webp"
+
             alt=""
+
             className="
               absolute
               left-1/2
@@ -127,11 +142,14 @@ export default function Plan() {
               -translate-x-1/2
               w-14
               z-30
+              pointer-events-none
             "
+
             style={{
               y: flowerPosition,
               rotate: flowerRotation,
             }}
+
           />
 
 
@@ -145,26 +163,33 @@ export default function Plan() {
 
 
               <motion.div
+
                 key={index}
+
                 initial={{
                   opacity:0,
                   y:40
                 }}
+
                 whileInView={{
                   opacity:1,
                   y:0
                 }}
+
                 transition={{
                   duration:0.8
                 }}
+
                 viewport={{
                   once:true
                 }}
+
                 className="
                   grid
                   grid-cols-[1fr_60px_1fr]
                   items-center
                 "
+
               >
 
 
