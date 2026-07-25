@@ -5,12 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Plan() {
 
-  const sectionRef = useRef<HTMLElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  })
+  const { scrollYProgress } = useScroll()
 
 
   const flowerPosition = useTransform(
@@ -58,7 +53,6 @@ export default function Plan() {
   return (
 
     <section
-      ref={sectionRef}
       className="
         relative
         min-h-screen
