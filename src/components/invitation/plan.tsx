@@ -1,245 +1,144 @@
 "use client"
 
+import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Plan() {
+  const sectionRef = useRef<HTMLElement>(null)
 
-  const { scrollYProgress } = useScroll()
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  })
 
-  const flowerY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, 250]
-  )
-
-  const flowerRotate = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, 180]
-  )
-
+  const flowerY = useTransform(scrollYProgress, [0, 1], [-20, 20])
+  const flowerRotate = useTransform(scrollYProgress, [0, 1], [-10, 10])
 
   const events = [
     {
-      time: "15 / 8 / 2026",
+      date: "15 / 08 / 2026",
       title: "عقد القران",
       place: "الجامع الكبير",
-      hour: "بعد صلاة العصر"
+      hour: "بعد صلاة العصر",
     },
     {
-      time: "17:00 H",
+      date: "17:00 H",
       title: "الانطلاق نحو المهدية جماعيا",
       place: "من محطة الحافلات باب عليوة",
-      hour: ""
+      hour: "",
     },
     {
-      time: "15 / 8 / 2026",
+      date: "15 / 08 / 2026",
       title: "مأدبة العشاء",
       place: "قاعة الأندلس للأفراح",
-      hour: "19:00 H ← 21:00"
+      hour: "19:00 H ← 21:00",
     },
     {
-      time: "15 / 8 / 2026",
+      date: "21:30 H",
       title: "الوطية و حفل الزفاف",
       place: "قاعة الأندلس للأفراح",
-      hour: "21:30 H"
-    }
+      hour: "",
+    },
   ]
 
-
   return (
-
-    <motion.section
-
-      className="
-        relative
-        min-h-screen
-        w-full
-        bg-cover
-        bg-center
-        flex
-        flex-col
-        items-center
-        justify-center
-        text-center
-        px-7
-        py-12
-        text-[#3d2020]
-        font-serif
-        overflow-hidden
-      "
-
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen overflow-hidden bg-cover bg-center py-20 px-6"
       style={{
-        backgroundImage:"url('/images/plan.jpg')"
+        backgroundImage: "url('/images/plan.jpg')",
       }}
-
       dir="rtl"
-
     >
+      <div className="absolute inset-0 bg-[#efe6d6]/45" />
 
+      <div className="relative z-10 mx-auto max-w-5xl">
 
-      <div
-        className="
-          absolute
-          inset-0
-          bg-[#efe6d6]/40
-        "
-      />
-
-
-      <motion.img
-
-        src="/images/flower-decor.webp"
-
-        className="
-          absolute
-          top-10
-          left-10
-          w-20
-          z-20
-        "
-
-        style={{
-          y: flowerY,
-          rotate: flowerRotate
-        }}
-
-      />
-
-
-      <div
-        className="
-          relative
-          z-10
-          w-full
-          max-w-md
-        "
-      >
-
-
-        <h2 className="
-          text-3xl
-          mb-4
-        ">
+        <h2 className="text-center text-4xl text-[#3d2020] font-serif">
           برنامج الحفل
         </h2>
 
+        <div className="mx-auto mt-5 mb-16 h-[1px] w-40 bg-[#af9b6a]" />
 
-        <div className="
-          w-32
-          h-[1px]
-          bg-[#af9b6a]
-          mx-auto
-          mb-10
-        "/>
+        <div className="relative">
 
+          <div
+            className="
+              absolute
+              left-1/2
+              top-0
+              bottom-0
+              w-[2px]
+              -translate-x-1/2
+              bg-[#af9b6a]
+            "
+          />
 
+          <div className="flex flex-col gap-16">
 
-        <div className="
-          flex
-          flex-col
-          gap-8
-        ">
-
-
-          {
-            events.map((event,index)=>(
+            {events.map((event, index) => (
 
               <div
                 key={index}
                 className="
                   relative
-                  flex
-                  flex-col
+                  grid
+                  grid-cols-[1fr_80px_1fr]
                   items-center
+                  gap-4
                 "
               >
 
+                <div className="text-left">
 
-                <div className="
-                  text-xl
-                  mb-2
-                ">
-                  {event.time}
-                </div>
-
-
-
-                <div className="
-                  text-2xl
-                  mb-1
-                ">
-                  {event.title}
-                </div>
-
-
-
-                <div className="
-                  text-lg
-                ">
-                  {event.place}
-                </div>
-
-
-
-                {
-                  event.hour &&
-                  <div className="
-                    mt-1
-                    text-lg
-                  ">
-                    {event.hour}
+                  <div className="text-xl text-[#3d2020] font-semibold">
+                    {event.date}
                   </div>
-                }
 
+                </div>
 
+                <div className="relative flex justify-center">
 
-                {
-                  index !== events.length - 1 &&
-                  <div className="
-                    mt-5
-                    w-[1px]
-                    h-12
-                    bg-[#af9b6a]
-                    relative
-                  ">
+                  <motion.img
+                    src="/images/flower-decor.webp"
+                    alt=""
+                    className="relative z-20 w-12"
+                    style={{
+                      y: flowerY,
+                      rotate: flowerRotate,
+                    }}
+                  />
 
-                    <motion.img
+                </div>
 
-                      src="/images/flower-decor.webp"
+                <div className="text-right">
 
-                      className="
-                        absolute
-                        w-6
-                        left-1/2
-                        -translate-x-1/2
-                      "
+                  <h3 className="text-2xl text-[#3d2020] font-serif">
+                    {event.title}
+                  </h3>
 
-                      style={{
-                        y: flowerY,
-                        rotate: flowerRotate
-                      }}
+                  <p className="mt-2 text-lg text-[#5a4030]">
+                    {event.place}
+                  </p>
 
-                    />
+                  {event.hour && (
+                    <p className="mt-1 text-base text-[#7b624d]">
+                      {event.hour}
+                    </p>
+                  )}
 
-                  </div>
-                }
-
+                </div>
 
               </div>
 
-            ))
-          }
+            ))}
 
+          </div>
 
         </div>
 
-
       </div>
 
-
-    </motion.section>
-
+    </section>
   )
-
 }
