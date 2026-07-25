@@ -101,14 +101,14 @@ export default function Pages() {
 
 
       <section
-        className="
-          relative
-          w-full
-          h-[100dvh]
-          snap-start
-          overflow-hidden
-        "
-      >
+className="
+relative
+w-full
+h-full
+snap-start
+overflow-hidden
+"
+>
 
         <Plan />
 

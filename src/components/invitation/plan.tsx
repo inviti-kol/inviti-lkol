@@ -17,60 +17,94 @@ export default function Plan() {
   const events = [
 
     {
-      date: "13 / 7 / 2026",
-      title: "عقد القران",
-      place: "جامع ابن عرفة",
-      hour: "بعد صلاة العصر",
-      map: "https://maps.app.goo.gl/w25q9GZ45A3RSAiQA",
-      icon: "contract",
+      date:"13 / 7 / 2026",
+      title:"عقد القران",
+      place:"جامع ابن عرفة",
+      hour:"بعد صلاة العصر",
+      map: "https://maps.google.com/?q=33.870778,10.100361",
+      icon:"contract",
+      side:"right",
     },
 
     {
-      date: "14 / 7 / 2026",
-      title: "مأدبة العشاء العريس",
-      place: "بقاعة افراح",
-      hour: "5:00 PM",
-      map: "https://maps.app.goo.gl/w25q9GZ45A3RSAiQA",
-      icon: "food",
+      date:"14 / 7 / 2026",
+      title:"مأدبة العشاء",
+      place:"بقاعة افراح",
+      hour:"5:00 PM",
+      icon:"food",
+      side:"left",
     },
 
     {
-      date: "14 / 7 / 2026",
-      title: "مأدبة العشاء العروس",
-      place: "بقاعة افراح",
-      hour: "5:00 PM",
-      map: "https://maps.app.goo.gl/w25q9GZ45A3RSAiQA",
-      icon: "food",
+      date:"14 / 7 / 2026",
+      title:"مأدبة العشاء",
+      place:"بقاعة افراح",
+      hour:"5:00 PM",
+      icon:"food",
+      side:"right",
     },
 
     {
-      date: "14 / 7 / 2026",
-      title: "حنة العريس",
-      place: "بقاعة افراح",
-      hour: "8:00 PM",
-      map: "https://maps.app.goo.gl/w25q9GZ45A3RSAiQA",
-      icon: "henna",
+      date:"14 / 7 / 2026",
+      title:"حنة العريس",
+      place:"بقاعة افراح",
+      hour:"8:00 PM",
+      icon:"henna",
+      side:"left",
     },
 
     {
-      date: "14 / 7 / 2026",
-      title: "حنة العروس",
-      place: "بقاعة افراح",
-      hour: "8:00 PM",
-      map: "https://maps.app.goo.gl/w25q9GZ45A3RSAiQA",
-      icon: "henna",
-    },
-
-    {
-      date: "15 / 7 / 2026",
-      title: "حفل الزفاف",
-      place: "",
-      hour: "",
-      map: "https://maps.app.goo.gl/w25q9GZ45A3RSAiQA",
-      icon: "wedding",
+      date:"15 / 7 / 2026",
+      title:"حفل الزفاف",
+      place:"فضاء عنتر دار الزمان",
+      hour:"9:00 PM",
+      icon:"wedding",
+      side:"right",
     },
 
   ]
+
+
+
+  function EventIcon({type}:{type:string}){
+
+
+    if(type==="contract"){
+
+      return (
+
+        <div className="relative">
+
+          <BookOpen size={20}/>
+
+          <PenLine
+            size={10}
+            className="
+            absolute
+            -right-2
+            -bottom-1
+            "
+          />
+
+        </div>
+
+      )
+
+    }
+
+
+    if(type==="food")
+      return <Utensils size={20}/>
+
+
+    if(type==="henna")
+      return <Heart size={20}/>
+
+
+    return <Sparkles size={20}/>
+
+  }
+
 
 
 
@@ -80,12 +114,11 @@ export default function Plan() {
 
       className="
       relative
-      h-full
+      w-full
+      min-h-full
+      overflow-hidden
       bg-cover
       bg-center
-      py-14
-      px-6
-      overflow-hidden
       "
 
       style={{
@@ -98,12 +131,15 @@ export default function Plan() {
 
 
       <div
+
         className="
         absolute
         inset-0
-        bg-[#efe6d6]/50
+        bg-[#efe6d6]/55
         "
+
       />
+
 
 
 
@@ -112,11 +148,13 @@ export default function Plan() {
         className="
         relative
         z-10
-        max-w-4xl
-        mx-auto
+        min-h-full
+        px-5
+        py-10
         "
 
       >
+
 
 
         <h2
@@ -124,27 +162,28 @@ export default function Plan() {
           className="
           text-center
           text-3xl
-          text-[#3d2020]
           font-serif
+          text-[#3d2020]
           "
 
         >
 
-          برنامج حفل الزفاف
+          برنامج الحفل
 
         </h2>
+
 
 
 
         <div
 
           className="
-          w-40
+          w-36
           h-px
           bg-[#af9b6a]
           mx-auto
-          mt-5
-          mb-12
+          mt-4
+          mb-8
           "
 
         />
@@ -152,19 +191,21 @@ export default function Plan() {
 
 
 
+
         <div className="relative">
+
 
 
           <div
 
             className="
             absolute
-            left-1/2
+            right-1/2
             top-0
             bottom-0
             w-px
             bg-[#af9b6a]
-            -translate-x-1/2
+            translate-x-1/2
             "
 
           />
@@ -172,190 +213,79 @@ export default function Plan() {
 
 
 
-          <div className="space-y-10">
+
+          <div className="space-y-0">
 
 
-            {
-              events.map((event,index)=>(
+          {
+            events.map((event,index)=>(
 
 
-                <div
+              <div
 
-                  key={index}
+                key={index}
 
-                  className="
-                  grid
-                  grid-cols-[1fr_56px_1fr]
-                  items-center
-                  "
+                className="
+                relative
+                grid
+                grid-cols-[1fr_35px_1fr]
+                items-start
+                "
 
-                >
-
-
-
-                  <div className="text-left">
-
-                    <p
-
-                      className="
-                      text-lg
-                      text-[#3d2020]
-                      font-serif
-                      "
-
-                    >
-
-                      {event.date}
-
-                    </p>
-
-                  </div>
+              >
 
 
 
 
 
-                  <div
-
-                    className="
-                    flex
-                    justify-center
-                    "
-
-                  >
-
+                {
+                  event.side==="left" ? (
 
                     <div
 
                       className="
-                      w-10
-                      h-10
-                      rounded-full
-                      border
-                      border-[#af9b6a]
-                      bg-[#efe6d6]
-                      flex
-                      items-center
-                      justify-center
-                      z-10
+                      text-left
+                      pr-2
                       "
 
                     >
-
-
-
-                    {
-                      event.icon === "contract" &&
-
-                      <div className="relative">
-
-                        <BookOpen
-                          size={24}
-                          className="text-[#af9b6a]"
-                        />
-
-                        <PenLine
-                          size={12}
-                          className="
-                          absolute
-                          -right-2
-                          -bottom-1
-                          text-[#af9b6a]
-                          "
-                        />
-
-                      </div>
-
-                    }
-
-
-
-                    {
-                      event.icon === "food" &&
-
-                      <Utensils
-
-                        size={23}
-
-                        className="text-[#af9b6a]"
-
-                      />
-
-                    }
-
-
-
-                    {
-                      event.icon === "henna" &&
-
-                      <Heart
-
-                        size={23}
-
-                        className="text-[#af9b6a]"
-
-                      />
-
-                    }
-
-
-
-                    {
-                      event.icon === "wedding" &&
-
-                      <Sparkles
-
-                        size={23}
-
-                        className="text-[#af9b6a]"
-
-                      />
-
-                    }
-
-
-
-                    </div>
-
-
-
-                  </div>
-
-
-
-
-
-
-
-                  <div className="text-right">
-
-
-
-                    <h3
-
-                      className="
-                      text-xl
-                      text-[#3d2020]
-                      font-serif
-                      "
-
-                    >
-
-                      {event.title}
-
-                    </h3>
-
-
-
-
-                    {
-                      event.place &&
 
                       <p
 
                         className="
-                        mt-2
+                        text-sm
+                        text-[#7a6048]
+                        "
+
+                      >
+
+                        {event.date}
+
+                      </p>
+
+
+
+                      <h3
+
+                        className="
                         text-lg
+                        font-serif
+                        text-[#3d2020]
+                        "
+
+                      >
+
+                        {event.title}
+
+                      </h3>
+
+
+
+
+                      <p
+
+                        className="
+                        text-sm
                         text-[#5a4030]
                         "
 
@@ -365,88 +295,250 @@ export default function Plan() {
 
                       </p>
 
-                    }
 
 
 
-
-
-                    {
-                      event.hour &&
-
-                      <p
+                      <div
 
                         className="
-                        mt-1
                         flex
-                        justify-end
+                        justify-start
                         items-center
-                        gap-2
+                        gap-1
+                        text-xs
                         text-[#6b5644]
+                        mt-1
                         "
 
                       >
 
-                        <Clock size={16}/>
+                        <Clock size={12}/>
 
                         {event.hour}
 
-
-                      </p>
-
-                    }
+                      </div>
 
 
 
 
+                      <a
+  href={event.map}
+  target="_blank"
+  rel="noopener noreferrer"
 
-                    <a
+                        className="
+                        flex
+                        items-center
+                        gap-1
+                        text-xs
+                        text-[#af9b6a]
+                        mt-2
+                        "
 
-                      href={event.map}
+                      >
 
-                      target="_blank"
+                        <MapPin size={12}/>
 
-                      rel="noopener noreferrer"
-                    
-                      className="
-                      mt-3
-                      inline-flex
-                      items-center
-                      gap-2
-                      text-sm
-                      text-[#af9b6a]
-                      underline
-                      "
+                        الموقع
 
-                    >
-
-                      <MapPin size={16}/>
-
-                      الموقع على الخريطة
+                      </a>
 
 
-                    </a>
+                    </div>
 
+
+                  ) : (
+
+                    <div></div>
+
+                  )
+
+                }
+
+
+
+
+
+
+
+                <div
+
+                  className="
+                  flex
+                  justify-center
+                  "
+
+                >
+
+                  <div
+
+                    className="
+                    w-8
+                    h-8
+                    rounded-full
+                    border
+                    border-[#af9b6a]
+                    bg-[#efe6d6]
+                    text-[#af9b6a]
+                    flex
+                    items-center
+                    justify-center
+                    z-10
+                    "
+
+                  >
+
+                    <EventIcon type={event.icon}/>
 
 
                   </div>
 
 
-
-
-
                 </div>
 
 
-              ))
-            }
+
+
+
+
+
+
+                {
+                  event.side==="right" ? (
+
+                    <div
+
+                      className="
+                      text-right
+                      pl-2
+                      "
+
+                    >
+
+
+                      <p
+
+                        className="
+                        text-sm
+                        text-[#7a6048]
+                        "
+
+                      >
+
+                        {event.date}
+
+                      </p>
+
+
+
+
+                      <h3
+
+                        className="
+                        text-lg
+                        font-serif
+                        text-[#3d2020]
+                        "
+
+                      >
+
+                        {event.title}
+
+                      </h3>
+
+
+
+
+
+                      <p
+
+                        className="
+                        text-sm
+                        text-[#5a4030]
+                        "
+
+                      >
+
+                        {event.place}
+
+                      </p>
+
+
+
+
+
+                      <div
+
+                        className="
+                        flex
+                        justify-end
+                        items-center
+                        gap-1
+                        text-xs
+                        text-[#6b5644]
+                        mt-1
+                        "
+
+                      >
+
+                        <Clock size={12}/>
+
+                        {event.hour}
+
+                      </div>
+
+
+
+
+
+                      <a
+  href={event.map}
+  target="_blank"
+  rel="noopener noreferrer"
+
+                        className="
+                        flex
+                        justify-end
+                        items-center
+                        gap-1
+                        text-xs
+                        text-[#af9b6a]
+                        mt-2
+                        "
+
+                      >
+
+                        <MapPin size={12}/>
+
+                        الموقع
+
+                      </a>
+
+
+                    </div>
+
+
+                  ) : (
+
+                    <div></div>
+
+                  )
+
+                }
+
+
+
+              </div>
+
+
+            ))
+          }
 
 
           </div>
 
 
         </div>
-
 
 
       </div>

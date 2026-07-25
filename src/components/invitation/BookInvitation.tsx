@@ -9,17 +9,17 @@ export default function BookInvitation() {
   const [open, setOpen] = useState(false)
   const [pagesVisible, setPagesVisible] = useState(false)
 
-
   function openBook() {
 
     if (open) return
 
     setOpen(true)
 
-    setPagesVisible(true)
+    setTimeout(() => {
+      setPagesVisible(true)
+    }, 900)
 
   }
-
 
   return (
 
@@ -31,13 +31,13 @@ export default function BookInvitation() {
         flex
         items-center
         justify-center
-        bg-[#efe6d6]
-        p-0
-        overflow-hidden
+        bg-[#1a0f12]
+        px-4
+        py-8
+        overflow-visible
       "
 
     >
-
 
       <div
 
@@ -45,16 +45,14 @@ export default function BookInvitation() {
           relative
           rounded-[36px]
           bg-[#faf7f1]
-          shadow-[0_30px_100px_rgba(0,0,0,0.25)]
+          shadow-[0_30px_100px_rgba(0,0,0,0.35)]
           border
           border-[#e7dcc5]
-          p-5
-          md:p-8
+          p-4
+          md:p-6
         "
 
       >
-
-
 
         <div
 
@@ -62,21 +60,18 @@ export default function BookInvitation() {
 
           className="
             relative
-            w-[92vw]
-            max-w-[560px]
-            aspect-[330/554]
+            w-[420px]
+            min-h-[700px]
             cursor-pointer
             select-none
             mx-auto
           "
 
           style={{
-            perspective:"2200px"
+            perspective: "2200px"
           }}
 
         >
-
-
 
           <AnimatePresence>
 
@@ -89,20 +84,20 @@ export default function BookInvitation() {
                     absolute
                     inset-0
                     z-10
-                    overflow-hidden
+                    overflow-y-auto
                     rounded-xl
                   "
 
                   initial={{
-                    opacity:0
+                    opacity: 0
                   }}
 
                   animate={{
-                    opacity:1
+                    opacity: 1
                   }}
 
                   transition={{
-                    duration:0.4
+                    duration: 0.8
                   }}
 
                 >
@@ -114,13 +109,13 @@ export default function BookInvitation() {
               )
             }
 
-
           </AnimatePresence>
 
 
 
 
 
+          {/* LEFT COVER */}
 
           <motion.div
 
@@ -135,30 +130,30 @@ export default function BookInvitation() {
               bg-center
               shadow-2xl
               origin-left
-              z-20
+              z-30
             "
 
             style={{
 
-              backgroundImage:"url('/images/left.jpg')",
+              backgroundImage: "url('/images/left.jpg')",
 
-              transformStyle:"preserve-3d",
+              transformStyle: "preserve-3d",
 
-              backfaceVisibility:"hidden"
+              backfaceVisibility: "hidden"
 
             }}
 
             animate={{
 
-              rotateY: open ? -90 : 0
+              rotateY: open ? -95 : 0
 
             }}
 
             transition={{
 
-              duration:1,
+              duration: 1.4,
 
-              ease:"easeInOut"
+              ease: [0.77, 0, 0.18, 1]
 
             }}
 
@@ -168,9 +163,9 @@ export default function BookInvitation() {
 
 
 
+          {/* RIGHT COVER */}
 
           <motion.div
-
 
             className="
               absolute
@@ -183,59 +178,42 @@ export default function BookInvitation() {
               bg-center
               shadow-2xl
               origin-right
-              z-30
+              z-40
             "
-
 
             style={{
 
+              backgroundImage: "url('/images/right.jpg')",
 
-              backgroundImage:"url('/images/right.jpg')",
+              transformStyle: "preserve-3d",
 
-
-              transformStyle:"preserve-3d",
-
-
-              backfaceVisibility:"hidden"
-
+              backfaceVisibility: "hidden"
 
             }}
-
 
             animate={{
 
-
-              rotateY:open ? 90 : 0
-
+              rotateY: open ? 95 : 0
 
             }}
-
 
             transition={{
 
+              duration: 1.4,
 
-              duration:1,
-
-
-              ease:"easeInOut"
-
+              ease: [0.77, 0, 0.18, 1]
 
             }}
 
-
-
           >
 
-
+            {/* SEAL */}
 
             <motion.img
 
-
               src="/images/seal.webp"
 
-
               alt="seal"
-
 
               className="
                 absolute
@@ -245,66 +223,47 @@ export default function BookInvitation() {
                 top-1/2
                 -translate-x-1/2
                 -translate-y-1/2
-                z-40
+                z-50
                 pointer-events-none
               "
-
 
               animate={
 
                 open
 
-                ?
+                  ? {
 
-                {
+                      scale: 0.6,
 
-                  scale:[1,1.08,1],
+                      opacity: 0
 
-                  y:[0,-18,-18],
+                    }
 
-                  opacity:[1,1,0]
+                  : {
 
-                }
+                      scale: 1,
 
-                :
+                      opacity: 1
 
-                {
-
-                  scale:1,
-
-                  y:0,
-
-                  opacity:1
-
-                }
+                    }
 
               }
 
-
               transition={{
 
+                duration: 0.7,
 
-                duration:0.8,
-
-                ease:"easeInOut"
-
+                ease: "easeInOut"
 
               }}
 
-
             />
-
-
 
           </motion.div>
 
-
-
         </div>
 
-
       </div>
-
 
     </main>
 
