@@ -59,13 +59,14 @@ export default function BookInvitation() {
           onClick={openBook}
 
           className="
-            relative
-            w-[420px]
-            min-h-[700px]
-            cursor-pointer
-            select-none
-            mx-auto
-          "
+              relative
+              w-[82vw]
+              max-w-[330px]
+              aspect-[330/542]
+              cursor-pointer
+              select-none
+              mx-auto
+            "
 
           style={{
             perspective: "2200px"
