@@ -20,6 +20,7 @@ export default function Footer() {
       items-center
       justify-center
       overflow-hidden
+      bg-[#efe6d6]
       "
 
       dir="rtl"
@@ -35,10 +36,6 @@ export default function Footer() {
         bg-cover
         bg-center
         "
-
-        style={{
-          backgroundImage:"url('/images/plan.jpg')"
-        }}
 
       />
 
@@ -139,7 +136,7 @@ export default function Footer() {
           
           <a
 
-            href="https://www.facebook.com/profile.php?id=100064787031636"
+            href=""
 
             target="_blank"
 
@@ -167,7 +164,7 @@ export default function Footer() {
 
           <a
 
-            href="https://instagram.com/invitini.tn"
+            href=""
 
             target="_blank"
 

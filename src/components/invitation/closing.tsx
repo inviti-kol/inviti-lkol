@@ -2,12 +2,13 @@
 
 export default function Closing() {
 
+  const flowers = Array.from({ length: 18 })
+
   return (
 
     <section
 
       className="
-      closing-section
       relative
       w-full
       h-full
@@ -18,6 +19,7 @@ export default function Closing() {
       justify-center
       text-center
       overflow-hidden
+      bg-[#efe6d6]
       "
 
       dir="rtl"
@@ -25,61 +27,37 @@ export default function Closing() {
     >
 
 
-      <div
-
-        className="
-        absolute
-        inset-0
-        bg-cover
-        bg-center
-        scale-110
-        "
-
-        style={{
-          backgroundImage:"url('/images/plan.jpg')"
-        }}
-
-      />
-
-
-
-
-      <div
-
-        className="
-        absolute
-        inset-0
-        bg-gradient-to-b
-        from-[#efe6d6]/40
-        via-[#efe6d6]/60
-        to-[#efe6d6]/80
-        "
-
-      />
-
-
-
-
-
       {/* FLORES CAYENDO */}
 
-       <div className="falling-flowers">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
-  <img src="/images/flower-decor.webp" alt="" />
+        {
+          flowers.map((_, i) => (
+
+            <img
+
+              key={i}
+
+              src="/images/flower-decor.webp"
+
+              className="falling-flower"
+
+              style={{
+
+                left:`${Math.random() * 100}%`,
+
+                animationDelay:`${Math.random() * 8}s`,
+
+                animationDuration:`${8 + Math.random() * 8}s`,
+
+                width:`${25 + Math.random() * 35}px`
+
+              }}
+
+            />
+
+          ))
+        }
 
 
       </div>
@@ -87,6 +65,8 @@ export default function Closing() {
 
 
 
+
+      {/* CONTENIDO */}
 
       <div
 
@@ -102,13 +82,7 @@ export default function Closing() {
       >
 
 
-
-
-
         <div className="gold-line"/>
-
-
-
 
 
 
@@ -124,8 +98,6 @@ export default function Closing() {
           بهاء & سيرين
 
         </h2>
-
-
 
 
 
@@ -146,8 +118,6 @@ export default function Closing() {
 
 
 
-
-
         <img
 
           src="/images/icon6.webp"
@@ -163,21 +133,10 @@ export default function Closing() {
 
 
 
-
-
-        <div
-
-          className="
-          gold-line
-          mt-6
-          "
-
-        />
-
+        <div className="gold-line mt-6"/>
 
 
       </div>
-
 
 
     </section>

@@ -391,3 +391,53 @@ body {
   }
 
 }
+
+.falling-flower {
+
+  position:absolute;
+
+  top:-80px;
+
+  opacity:0.85;
+
+  animation-name: flowerFall;
+
+  animation-timing-function:linear;
+
+  animation-iteration-count:infinite;
+
+}
+
+
+
+@keyframes flowerFall {
+
+  0% {
+
+    transform:
+    translateY(-100px)
+    rotate(0deg);
+
+  }
+
+
+  50% {
+
+    transform:
+    translateY(50vh)
+    translateX(40px)
+    rotate(180deg);
+
+  }
+
+
+  100% {
+
+    transform:
+    translateY(120vh)
+    translateX(-40px)
+    rotate(360deg);
+
+  }
+
+}
