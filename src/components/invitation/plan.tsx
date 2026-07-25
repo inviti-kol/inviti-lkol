@@ -110,20 +110,27 @@ export default function Plan() {
 
   return (
 
-    <section
+  <section
   className="
     relative
     w-full
-    h-full
-    overflow-y-auto
-    bg-cover
-    bg-center
+    min-h-full
+    overflow-hidden
   "
-  style={{
-    backgroundImage: "url('/images/plan.jpg')"
-  }}
   dir="rtl"
 >
+  <div
+  className="
+    absolute
+    inset-0
+    bg-cover
+    bg-top
+  "
+  style={{
+    backgroundImage:"url('/images/plan.jpg')",
+    backgroundSize:"100% auto"
+  }}
+/>
 
 
 
@@ -141,14 +148,14 @@ export default function Plan() {
 
 
       <div
-  className="
-    relative
-    z-10
-    min-h-full
-    px-5
-    py-10
-    pb-24
-  "
+className="
+relative
+z-10
+px-5
+py-10
+pb-24
+min-h-[900px]
+"
 >
 
 
