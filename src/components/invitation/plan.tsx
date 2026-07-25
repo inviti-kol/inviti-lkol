@@ -407,7 +407,7 @@ export default function Plan() {
                       target="_blank"
 
                       rel="noopener noreferrer"
-
+                    
                       className="
                       mt-3
                       inline-flex

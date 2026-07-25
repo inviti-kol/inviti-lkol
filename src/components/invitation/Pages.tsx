@@ -13,81 +13,59 @@ import Plan from "./plan"
 
 export default function Pages() {
 
-
   return (
 
-
     <div
-
       className="
         absolute
         inset-0
+        w-full
+        h-full
         overflow-y-auto
         snap-y
         snap-mandatory
-        scroll-smooth
       "
-
     >
 
 
-
-
-
-      {/* INTRO */}
-
-
       <section
-
         className="
           relative
-          min-h-full
+          w-full
+          h-[100dvh]
           snap-start
           overflow-hidden
           flex
           flex-col
           items-center
           text-center
-          px-7
-          pt-10
-          pb-16
           text-[#3d2020]
         "
-
-        dir="rtl"
-
       >
-
 
         <Background />
 
 
-
         <div
-
           className="
             relative
             z-10
+            w-full
+            h-full
             flex
             flex-col
             items-center
-            w-full
+            justify-center
           "
-
         >
-
 
           <Basmala />
 
-
           <Verse />
-
 
           <InvitationText />
 
-
           <Families />
-
 
           <CouplesName />
 
@@ -95,7 +73,6 @@ export default function Pages() {
         </div>
 
 
-
         <ScrollHint />
 
 
@@ -104,73 +81,43 @@ export default function Pages() {
 
 
 
-
-
-
-
-      {/* COUNTDOWN */}
-
-
       <section
-  className="
-    relative
-    h-full
-    min-h-full
-    snap-start
-    overflow-hidden
-  "
-
-        dir="rtl"
-
+        className="
+          relative
+          w-full
+          h-[100dvh]
+          snap-start
+          overflow-hidden
+        "
       >
-
 
         <Countdown />
 
-
         <ScrollHint />
-
 
       </section>
 
 
-
-
-
-
-
-
-
-      {/* PROGRAMME */}
 
 
       <section
-
         className="
           relative
-          min-h-full
+          w-full
+          h-[100dvh]
           snap-start
+          overflow-hidden
         "
-
-        dir="rtl"
-
       >
-
 
         <Plan />
 
-
         <ScrollHint />
-
 
       </section>
 
 
-
-
-
     </div>
-
 
   )
 
