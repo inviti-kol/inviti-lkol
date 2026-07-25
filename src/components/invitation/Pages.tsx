@@ -112,12 +112,13 @@ export default function Pages() {
 
 
       <section
-
-        className="
-          relative
-          min-h-full
-          snap-start
-        "
+  className="
+    relative
+    h-full
+    min-h-full
+    snap-start
+    overflow-hidden
+  "
 
         dir="rtl"
 

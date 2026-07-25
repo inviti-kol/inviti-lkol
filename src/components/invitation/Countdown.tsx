@@ -118,51 +118,46 @@ export default function Countdown() {
 
     <motion.div
 
+  className="
+    relative
+    overflow-hidden
+    flex
+    flex-col
+    items-center
+    justify-center
+    text-center
+    font-serif
+    text-[#3d2020]
+    px-7
+    py-12
+    bg-cover
+    bg-center
+    min-h-full
+    w-full
+  "
 
-      className="
-        relative
-        overflow-hidden
-        flex
-        flex-col
-        items-center
-        justify-center
-        text-center
-        font-serif
-        text-[#3d2020]
-        px-7
-        py-12
-        bg-cover
-        bg-center
-        h-full
-      "
+  style={{
+    backgroundImage:"url('/images/countdown-bg.jpg')"
+  }}
 
+  initial={{
+    opacity:0,
+    y:40
+  }}
 
-      style={{
-        backgroundImage:"url('/images/countdown-bg.jpg')"
-      }}
+  animate={{
+    opacity:1,
+    y:0
+  }}
 
+  transition={{
+    delay:1.2,
+    duration:1
+  }}
 
-      initial={{
-        opacity:0,
-        y:40
-      }}
+  dir="rtl"
 
-
-      animate={{
-        opacity:1,
-        y:0
-      }}
-
-
-      transition={{
-        delay:1.2,
-        duration:1
-      }}
-
-
-      dir="rtl"
-
-    >
+>
 
 
       {/* capa transparente */}
