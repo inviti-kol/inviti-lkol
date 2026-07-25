@@ -9,7 +9,8 @@ import Countdown from "./Countdown"
 import ScrollHint from "./ScrollHint"
 import Background from "./Background"
 import Plan from "./plan"
-
+import Footer from "./Footer"
+import Closing from "./closing"
 
 export default function Pages() {
 
@@ -116,7 +117,33 @@ overflow-hidden
 
       </section>
 
+<section
+  className="
+  relative
+  w-full
+  h-[100dvh]
+  snap-start
+  overflow-hidden
+  "
+>
 
+  <Closing />
+
+</section>
+
+<section
+  className="
+  relative
+  w-full
+  h-[100dvh]
+  snap-start
+  overflow-hidden
+  "
+>
+
+  <Footer />
+
+</section>
     </div>
 
   )

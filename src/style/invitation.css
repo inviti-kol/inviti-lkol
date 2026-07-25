@@ -158,3 +158,236 @@ body {
     0 2px 8px rgba(0,0,0,0.45),
     0 1px 3px rgba(0,0,0,0.55);
 }
+
+.closing-section {
+  position: relative;
+}
+
+
+.gold-line {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #af9b6a,
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+
+.closing-names {
+
+  margin-top: 25px;
+
+  font-size: clamp(38px, 8vw, 60px);
+
+  color: #3d2020;
+
+  background: linear-gradient(
+    90deg,
+    #8f6f35,
+    #d6b878,
+    #8f6f35
+  );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+
+  animation: goldMove 5s linear infinite;
+
+}
+
+
+
+.closing-text {
+
+  margin-top: 20px;
+
+  font-size: clamp(18px,4vw,24px);
+
+  color:#5a4030;
+
+}
+
+
+
+.closing-icon {
+
+  width: clamp(80px,28vw,120px);
+
+  height:auto;
+
+  object-fit:contain;
+
+  margin-top:15px;
+
+  filter:
+  drop-shadow(0 4px 16px rgba(0,0,0,.25));
+
+}
+
+
+
+@keyframes shimmer {
+
+  0% {
+
+    opacity:.3;
+
+  }
+
+  50% {
+
+    opacity:1;
+
+  }
+
+  100% {
+
+    opacity:.3;
+
+  }
+
+}
+
+
+
+@keyframes goldMove {
+
+  0% {
+
+    background-position:0% center;
+
+  }
+
+  100% {
+
+    background-position:200% center;
+
+  }
+
+}
+
+.falling-flowers {
+
+  position:absolute;
+
+  inset:0;
+
+  overflow:hidden;
+
+  z-index:5;
+
+  pointer-events:none;
+
+}
+
+
+
+.falling-flowers img {
+
+  position:absolute;
+
+  top:-120px;
+
+  width:70px;
+
+  opacity:.75;
+
+  animation: flowerFall linear infinite;
+
+}
+
+
+
+.falling-flowers img:nth-child(1){
+
+  left:5%;
+
+  animation-duration:10s;
+
+}
+
+
+
+.falling-flowers img:nth-child(2){
+
+  left:25%;
+
+  width:90px;
+
+  animation-duration:13s;
+
+  animation-delay:2s;
+
+}
+
+
+
+.falling-flowers img:nth-child(3){
+
+  left:50%;
+
+  width:60px;
+
+  animation-duration:11s;
+
+  animation-delay:1s;
+
+}
+
+
+
+.falling-flowers img:nth-child(4){
+
+  left:70%;
+
+  width:85px;
+
+  animation-duration:14s;
+
+  animation-delay:3s;
+
+}
+
+
+
+.falling-flowers img:nth-child(5){
+
+  left:90%;
+
+  width:65px;
+
+  animation-duration:12s;
+
+  animation-delay:4s;
+
+}
+
+
+
+@keyframes flowerFall {
+
+  0% {
+
+    transform:
+    translateY(-120px)
+    rotate(0deg);
+
+  }
+
+
+  100% {
+
+    transform:
+    translateY(110vh)
+    rotate(360deg);
+
+  }
+
+}
