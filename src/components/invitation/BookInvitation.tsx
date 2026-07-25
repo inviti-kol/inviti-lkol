@@ -56,23 +56,32 @@ export default function BookInvitation() {
 
         <div
 
-          onClick={openBook}
 
-          className="
-              relative
-              w-[82vw]
-              max-w-[330px]
-              aspect-[330/542]
-              cursor-pointer
-              select-none
-              mx-auto
-            "
 
-          style={{
-            perspective: "2200px"
-          }}
+  onClick={openBook}
 
-        >
+  className="
+    relative
+
+    w-[330px]
+    h-[620px]
+
+    sm:w-[360px]
+    sm:h-[650px]
+
+    md:w-[420px]
+    md:h-[700px]
+
+    cursor-pointer
+    select-none
+    mx-auto
+  "
+
+  style={{
+    perspective: "2200px"
+  }}
+
+>
 
           <AnimatePresence>
 
