@@ -128,6 +128,7 @@ overflow-hidden
 >
 
   <Closing />
+        <ScrollHint />
 
 </section>
 
