@@ -218,8 +218,8 @@ export default function BookInvitation() {
               absolute
               right-45
               top-45
-              w-110
-              h-80
+              w-130
+              h-100
               overflow-hidden
               z-30
             "
@@ -255,8 +255,8 @@ export default function BookInvitation() {
               absolute
               left-50
               top-45
-              w-100
-              h-80
+              w-130
+              h-100
               overflow-hidden
               z-30
             "
