@@ -131,7 +131,7 @@ export default function Plan() {
     className="
       absolute
       inset-0
-      min-h-[1020px]
+      min-h-full
       bg-cover
       bg-center
     "
@@ -145,7 +145,7 @@ export default function Plan() {
     className="
       absolute
       inset-0
-      min-h-[1020px]
+      min-h-full
       bg-[#efe6d6]/55
     "
   />
