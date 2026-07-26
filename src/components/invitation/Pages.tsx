@@ -22,11 +22,12 @@ export default function Pages() {
         inset-0
         w-full
         h-full
-        overflow-y-auto
+        overflow-y-scroll
         snap-y
         snap-mandatory
       "
       style={{
+        overscrollBehavior: "contain",
         WebkitOverflowScrolling: "auto"
       }}
     >
@@ -36,7 +37,8 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
+          min-h-[100dvh]
           snap-start
           snap-stop-always
           overflow-hidden
@@ -85,11 +87,13 @@ export default function Pages() {
 
 
 
+
       <section
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
+          min-h-[100dvh]
           snap-start
           snap-stop-always
           overflow-hidden
@@ -105,11 +109,13 @@ export default function Pages() {
 
 
 
+
       <section
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
+          min-h-[100dvh]
           snap-start
           snap-stop-always
           overflow-hidden
@@ -125,11 +131,13 @@ export default function Pages() {
 
 
 
+
       <section
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
+          min-h-[100dvh]
           snap-start
           snap-stop-always
           overflow-hidden
@@ -145,11 +153,13 @@ export default function Pages() {
 
 
 
+
       <section
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
+          min-h-[100dvh]
           snap-start
           snap-stop-always
           overflow-hidden
