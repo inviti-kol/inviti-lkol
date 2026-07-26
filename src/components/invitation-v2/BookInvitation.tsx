@@ -54,7 +54,7 @@ export default function BookInvitation() {
           md:h-[700px]
 
           overflow-hidden
-          rounded-[43px]
+          rounded-[50px]
 
           border-15
           border-[#e7dcc5]
