@@ -77,11 +77,11 @@ export default function Pages() {
           <CouplesName />
 
 
-        </div>
+        
 
 
         <ScrollHint />
-
+</div>
 
       </section>
 
