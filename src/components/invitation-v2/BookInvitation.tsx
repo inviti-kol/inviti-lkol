@@ -221,7 +221,7 @@ export default function BookInvitation() {
   style={{
     right: "50%",
     top: "25%",
-    width: "100%",
+    width: "120%",
     height: "50%"
   }}
             animate={{
