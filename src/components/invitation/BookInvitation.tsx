@@ -1,36 +1,27 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Pages from "./Pages"
+
 
 export default function BookInvitation() {
 
   const [open, setOpen] = useState(false)
   const [pagesVisible, setPagesVisible] = useState(false)
   const [loading, setLoading] = useState(true)
-useEffect(() => {
-  const images = Array.from(document.images)
+  useEffect(() => {
 
-  const imagesLoaded = Promise.all(
-    images.map((img) => {
-      if (img.complete) return Promise.resolve()
+    const timer = setTimeout(() => {
 
-      return new Promise<void>((resolve) => {
-        img.onload = () => resolve()
-        img.onerror = () => resolve()
-      })
-    })
-  )
+      setLoading(false)
 
-  const minimumTime = new Promise((resolve) =>
-    setTimeout(resolve, 2000)
-  )
+    }, 2000)
 
-  Promise.all([imagesLoaded, minimumTime]).then(() => {
-    setLoading(false)
-  })
-}, [])
+
+    return () => clearTimeout(timer)
+
+  }, [])
   function openBook() {
 
     if (open) return
@@ -60,6 +51,7 @@ useEffect(() => {
       "
 
     >
+
       <div
 
         className="
@@ -79,7 +71,9 @@ useEffect(() => {
 
 
 
-  onClick={openBook}
+onClick={() => {
+  if (!loading) openBook()
+}}  
 
   className="
     relative
@@ -103,63 +97,119 @@ useEffect(() => {
   }}
 
 >
-
-
 <AnimatePresence>
-  {loading && (
-    <motion.div
-      className="
-        absolute
-        inset-0
-        z-[100]
-        flex
-        flex-col
-        items-center
-        justify-center
-        bg-[#faf7f1]
-        backdrop-blur-[2px]
-        rounded-xl
-      "
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div
-          className="
-            w-12
-            h-12
-            rounded-full
-            border-4
-            border-[#d8c49a]
-            border-t-[#7d5d2d]
-            animate-spin
-          "
-        />
 
-        <p
-          className="
-            mt-8
-            text-3xl
-            text-[#4d2d1c]
-            font-serif
-          "
-        >
-          لحظة واحدة
-        </p>
+{
+loading && (
 
-        <p
-          className="
-            mt-2
-            text-[#8b6d46]
-            text-sm
-          "
-        >
-          جاري تجهيز الدعوة
-        </p>
+<motion.div
 
-    </motion.div>
-  )}
+className="
+absolute
+inset-0
+z-[100]
+rounded-xl
+bg-[#faf7f1]
+flex
+flex-col
+items-center
+justify-center
+"
+
+initial={{
+opacity:1
+}}
+
+exit={{
+opacity:0
+}}
+
+transition={{
+duration:0.6
+}}
+
+>
+
+<div
+className="
+w-12
+h-12
+rounded-full
+border-4
+border-[#d8c49a]
+border-t-[#7d5d2d]
+animate-spin
+"
+/>
+
+
+<p
+className="
+mt-8
+text-3xl
+text-[#4d2d1c]
+font-serif
+"
+>
+لحظة واحدة
+</p>
+
+
+<p
+className="
+mt-2
+text-[#8b6d46]
+text-sm
+"
+>
+جاري تجهيز الدعوة
+</p>
+
+
+</motion.div>
+
+)
+
+}
+
 </AnimatePresence>
+          <AnimatePresence>
+
+            {
+              pagesVisible && (
+
+                <motion.div
+
+                  className="
+                    absolute
+                    inset-0
+                    z-10
+                    overflow-y-auto
+                    rounded-xl
+                  "
+
+                  initial={{
+                    opacity: 0
+                  }}
+
+                  animate={{
+                    opacity: 1
+                  }}
+
+                  transition={{
+                    duration: 0.8
+                  }}
+
+                >
+
+                  <Pages />
+
+                </motion.div>
+
+              )
+            }
+
+          </AnimatePresence>
 
 
 
