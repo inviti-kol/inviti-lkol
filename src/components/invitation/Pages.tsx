@@ -24,7 +24,8 @@ export default function Pages() {
         h-full
         overflow-y-auto
         snap-y
-        snap-mandatory
+        snap-proximity
+        overscroll-contain
       "
     >
 
