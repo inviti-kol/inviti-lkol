@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Pages from "./Pages"
 
@@ -8,7 +8,29 @@ export default function BookInvitation() {
 
   const [open, setOpen] = useState(false)
   const [pagesVisible, setPagesVisible] = useState(false)
+  const [loading, setLoading] = useState(true)
+useEffect(() => {
+  const images = Array.from(document.images)
 
+  const imagesLoaded = Promise.all(
+    images.map((img) => {
+      if (img.complete) return Promise.resolve()
+
+      return new Promise<void>((resolve) => {
+        img.onload = () => resolve()
+        img.onerror = () => resolve()
+      })
+    })
+  )
+
+  const minimumTime = new Promise((resolve) =>
+    setTimeout(resolve, 2000)
+  )
+
+  Promise.all([imagesLoaded, minimumTime]).then(() => {
+    setLoading(false)
+  })
+}, [])
   function openBook() {
 
     if (open) return
@@ -38,7 +60,6 @@ export default function BookInvitation() {
       "
 
     >
-
       <div
 
         className="
@@ -83,43 +104,62 @@ export default function BookInvitation() {
 
 >
 
-          <AnimatePresence>
 
-            {
-              pagesVisible && (
+<AnimatePresence>
+  {loading && (
+    <motion.div
+      className="
+        absolute
+        inset-0
+        z-[100]
+        flex
+        flex-col
+        items-center
+        justify-center
+        bg-[#faf7f1]
+        backdrop-blur-[2px]
+        rounded-xl
+      "
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div
+          className="
+            w-12
+            h-12
+            rounded-full
+            border-4
+            border-[#d8c49a]
+            border-t-[#7d5d2d]
+            animate-spin
+          "
+        />
 
-                <motion.div
+        <p
+          className="
+            mt-8
+            text-3xl
+            text-[#4d2d1c]
+            font-serif
+          "
+        >
+          لحظة واحدة
+        </p>
 
-                  className="
-                    absolute
-                    inset-0
-                    z-10
-                    overflow-y-auto
-                    rounded-xl
-                  "
+        <p
+          className="
+            mt-2
+            text-[#8b6d46]
+            text-sm
+          "
+        >
+          جاري تجهيز الدعوة
+        </p>
 
-                  initial={{
-                    opacity: 0
-                  }}
-
-                  animate={{
-                    opacity: 1
-                  }}
-
-                  transition={{
-                    duration: 0.8
-                  }}
-
-                >
-
-                  <Pages />
-
-                </motion.div>
-
-              )
-            }
-
-          </AnimatePresence>
+    </motion.div>
+  )}
+</AnimatePresence>
 
 
 
