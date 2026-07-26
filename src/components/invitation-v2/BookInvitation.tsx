@@ -251,16 +251,18 @@ export default function BookInvitation() {
 
           {/* RIGHT */}
 
-          <motion.div
-            className="
-              absolute
-              left-50
-              top-45
-              w-130
-              h-100
-              overflow-hidden
-              z-[30]
-            "
+                    <motion.div
+  className="
+    absolute
+    overflow-hidden
+    z-[30]
+  "
+  style={{
+    left: "50%",
+    top: "25%",
+    width: "120%",
+    height: "50%"
+  }}
             animate={{
               x: open ? "115%" : "0%",
             }}
