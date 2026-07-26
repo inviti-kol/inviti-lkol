@@ -73,7 +73,7 @@ export default function BookInvitation() {
               "
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: .5 }}
+              transition={{ duration: 0.5 }}
             >
               <div
                 className="
@@ -124,8 +124,8 @@ export default function BookInvitation() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                duration: .8,
-                delay: .2
+                duration: 0.8,
+                delay: 0.2,
               }}
             >
               <Pages />
@@ -142,7 +142,7 @@ export default function BookInvitation() {
             select-none
           "
         >
-          {/* TOP */}
+                    {/* TOP */}
 
           <motion.div
             className="
@@ -153,26 +153,26 @@ export default function BookInvitation() {
               h-full
               -translate-y-60
               overflow-hidden
-              z-70
+              z-[70]
             "
             animate={{
-              y: open ? "-110%" : "0%"
+              y: open ? "-110%" : "0%",
             }}
             transition={{
               duration: 1.5,
-              ease: [0.77, 0, 0.18, 1]
+              ease: [0.77, 0, 0.18, 1],
             }}
           >
             <img
               src="/images/top.webp"
               alt=""
+              draggable={false}
               className="
                 w-full
                 h-full
                 object-cover
                 pointer-events-none
               "
-              draggable={false}
             />
           </motion.div>
 
@@ -181,20 +181,19 @@ export default function BookInvitation() {
           <motion.div
             className="
               absolute
-              bottom-0
-              top-60
               left-0
+              top-60
               w-full
               h-full
               overflow-hidden
-              z-40
+              z-[40]
             "
             animate={{
-              y: open ? "110%" : "0%"
+              y: open ? "110%" : "0%",
             }}
             transition={{
               duration: 1.5,
-              ease: [0.77, 0, 0.18, 1]
+              ease: [0.77, 0, 0.18, 1],
             }}
           >
             <img
@@ -211,7 +210,7 @@ export default function BookInvitation() {
             />
           </motion.div>
 
-          {/* LEFT */}
+                    {/* LEFT */}
 
           <motion.div
             className="
@@ -221,14 +220,14 @@ export default function BookInvitation() {
               w-130
               h-100
               overflow-hidden
-              z-30
+              z-[30]
             "
             animate={{
-              x: open ? "-115%" : "0%"
+              x: open ? "-115%" : "0%",
             }}
             transition={{
               duration: 1.5,
-              ease: [0.77, 0, 0.18, 1]
+              ease: [0.77, 0, 0.18, 1],
             }}
           >
             <img
@@ -248,7 +247,7 @@ export default function BookInvitation() {
             />
           </motion.div>
 
-                    {/* RIGHT */}
+          {/* RIGHT */}
 
           <motion.div
             className="
@@ -258,14 +257,14 @@ export default function BookInvitation() {
               w-130
               h-100
               overflow-hidden
-              z-30
+              z-[30]
             "
             animate={{
-              x: open ? "115%" : "0%"
+              x: open ? "115%" : "0%",
             }}
             transition={{
               duration: 1.5,
-              ease: [0.77, 0, 0.18, 1]
+              ease: [0.77, 0, 0.18, 1],
             }}
           >
             <img
@@ -285,7 +284,7 @@ export default function BookInvitation() {
             />
           </motion.div>
 
-          {/* SEAL */}
+                    {/* SEAL */}
 
           <motion.img
             src="/images/seal.webp"
@@ -306,20 +305,20 @@ export default function BookInvitation() {
               open
                 ? {
                     scale: 1.25,
-                    opacity: 0
+                    opacity: 0,
                   }
                 : {
                     scale: 1,
-                    opacity: 1
+                    opacity: 1,
                   }
             }
             transition={{
-              duration: .7,
-              ease: "easeInOut"
+              duration: 0.7,
+              ease: "easeInOut",
             }}
           />
 
-          {/* Glow */}
+          {/* GLOW */}
 
           <motion.div
             className="
@@ -330,14 +329,14 @@ export default function BookInvitation() {
               z-[5]
             "
             animate={{
-              opacity: open ? 0 : .15
+              opacity: open ? 0 : 0.15,
             }}
             transition={{
-              duration: 1
+              duration: 1,
             }}
             style={{
               background:
-                "radial-gradient(circle at center, rgba(255,255,255,.18), transparent 70%)"
+                "radial-gradient(circle at center, rgba(255,255,255,.18), transparent 70%)",
             }}
           />
         </div>
