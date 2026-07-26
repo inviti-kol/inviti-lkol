@@ -24,9 +24,11 @@ export default function Pages() {
         h-full
         overflow-y-auto
         snap-y
-        snap-proximity
-        overscroll-contain
+        snap-mandatory
       "
+      style={{
+        WebkitOverflowScrolling: "auto"
+      }}
     >
 
 
@@ -36,7 +38,7 @@ export default function Pages() {
           w-full
           h-[100dvh]
           snap-start
-          touch-pan-y
+          snap-stop-always
           overflow-hidden
           flex
           flex-col
@@ -72,7 +74,6 @@ export default function Pages() {
 
           <CouplesName />
 
-
         </div>
 
 
@@ -90,7 +91,7 @@ export default function Pages() {
           w-full
           h-[100dvh]
           snap-start
-          touch-pan-y
+          snap-stop-always
           overflow-hidden
         "
       >
@@ -106,14 +107,14 @@ export default function Pages() {
 
       <section
         className="
-        relative
-        w-full
-        h-full
-        snap-start
-        touch-pan-y
-        overflow-hidden
+          relative
+          w-full
+          h-[100dvh]
+          snap-start
+          snap-stop-always
+          overflow-hidden
         "
->
+      >
 
         <Plan />
 
@@ -121,36 +122,45 @@ export default function Pages() {
 
       </section>
 
-<section
-  className="
-  relative
-  w-full
-  h-[100dvh]
-  snap-start
-  touch-pan-y
-  overflow-hidden
-  "
->
 
-  <Closing />
+
+
+      <section
+        className="
+          relative
+          w-full
+          h-[100dvh]
+          snap-start
+          snap-stop-always
+          overflow-hidden
+        "
+      >
+
+        <Closing />
+
         <ScrollHint />
 
-</section>
+      </section>
 
-<section
-  className="
-  relative
-  w-full
-  h-[100dvh]
-  snap-start
-  touch-pan-y
-  overflow-hidden
-  "
->
 
-  <Footer />
 
-</section>
+
+      <section
+        className="
+          relative
+          w-full
+          h-[100dvh]
+          snap-start
+          snap-stop-always
+          overflow-hidden
+        "
+      >
+
+        <Footer />
+
+      </section>
+
+
     </div>
 
   )
