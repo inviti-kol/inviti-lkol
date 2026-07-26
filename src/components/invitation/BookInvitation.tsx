@@ -184,7 +184,7 @@ text-sm
                     absolute
                     inset-0
                     z-10
-                    overflow-y-auto
+                    overflow-hidden
                     rounded-xl
                   "
 
