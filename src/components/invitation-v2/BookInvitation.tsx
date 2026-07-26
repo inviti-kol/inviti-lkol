@@ -56,10 +56,11 @@ export default function BookInvitation() {
           overflow-hidden
           rounded-[28px]
 
-          border
+          border-15
           border-[#e7dcc5]
           shadow-[0_30px_100px_rgba(0,0,0,0.35)]
-        "
+        
+          "
       >
         <AnimatePresence>
           {loading && (
