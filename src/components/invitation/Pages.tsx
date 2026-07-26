@@ -96,6 +96,7 @@ export default function Pages() {
           h-[100dvh]
           snap-start
           overflow-hidden
+          bottom-15
         "
       >
 
