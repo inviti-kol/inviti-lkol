@@ -62,7 +62,6 @@ export default function Pages() {
             flex-col
             items-center
             justify-center
-            
           "
         >
 
@@ -77,11 +76,10 @@ export default function Pages() {
           <CouplesName />
 
 
-        
+          <ScrollHint color="light" />
 
 
-        <ScrollHint />
-</div>
+        </div>
 
       </section>
 

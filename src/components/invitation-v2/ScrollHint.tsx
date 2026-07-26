@@ -2,7 +2,11 @@
 
 import { motion } from "framer-motion"
 
-export default function ScrollHint() {
+export default function ScrollHint({
+  color = "dark"
+}: {
+  color?: "light" | "dark"
+}) {
 
 
   function scrollDown(){
@@ -26,13 +30,25 @@ export default function ScrollHint() {
   }
 
 
+  const textColor =
+    color === "light"
+      ? "text-[#EDEBB7]"
+      : "text-[#3d2020]"
+
+
+  const borderColor =
+    color === "light"
+      ? "border-[#EDEBB7]"
+      : "border-[#3d2020]"
+
+
   return (
 
     <motion.button
 
       onClick={scrollDown}
 
-      className="
+      className={`
         absolute
         bottom-6
         left-1/2
@@ -40,9 +56,9 @@ export default function ScrollHint() {
         flex
         flex-col
         items-center
-        text-[#EDEBB7]
+        ${textColor}
         font-serif
-      "
+      `}
 
       animate={{
         y:[0,10,0]
@@ -63,15 +79,15 @@ export default function ScrollHint() {
 
 
       <div
-        className="
+        className={`
           w-3
           h-3
           border-r
           border-b
-          border-[#3d2020]
+          ${borderColor}
           rotate-45
           mt-2
-        "
+        `}
       />
 
 
