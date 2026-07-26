@@ -40,7 +40,7 @@ export default function ScrollHint() {
         flex
         flex-col
         items-center
-        text-[#3d2020]
+        text-[#EDEBB7]
         font-serif
       "
 
