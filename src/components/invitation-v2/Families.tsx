@@ -41,7 +41,11 @@ dir="rtl"
 </div>
 
 <div className="family-name">
-محمد بن لزهر الخصخوصي
+محمد بن لزهر
+</div>
+
+<div className="family-lastname">
+الخصخوصي
 </div>
 
 </div>
@@ -65,7 +69,11 @@ dir="rtl"
 </div>
 
 <div className="family-name">
-محمد بن الحبيب جماعي
+محمد بن الحبيب
+</div>
+
+<div className="family-lastname">
+جماعي
 </div>
 
 </div>

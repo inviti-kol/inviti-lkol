@@ -196,7 +196,22 @@ body {
 
 }
 
+.family-lastname {
 
+  font-family: var(--font-amiri), serif;
+
+  font-size: clamp(14px,4vw,17px);
+
+  color: rgba(248,240,255,0.85);
+
+  font-weight:700;
+
+  margin-top:2px;
+
+  text-shadow:
+    0 1px 6px rgba(0,0,0,0.45);
+
+}
 
 .and-symbol {
 
