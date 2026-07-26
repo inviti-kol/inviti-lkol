@@ -45,7 +45,7 @@ dir="rtl"
 </div>
 
 <div className="family-lastname">
-الخصخوصي
+خصخوصي
 </div>
 
 </div>
