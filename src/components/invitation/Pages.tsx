@@ -12,24 +12,25 @@ import Plan from "./plan"
 import Footer from "./Footer"
 import Closing from "./closing"
 
+
 export default function Pages() {
 
   return (
 
     <div
       className="
+        pages-scroll
         absolute
         inset-0
         w-full
         h-full
-        overflow-y-scroll
+        overflow-y-auto
+        overflow-x-hidden
         snap-y
         snap-mandatory
+        overscroll-contain
+        scroll-smooth
       "
-      style={{
-        overscrollBehavior: "contain",
-        WebkitOverflowScrolling: "auto"
-      }}
     >
 
 
@@ -37,10 +38,8 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-full
-          min-h-[100dvh]
+          h-[100dvh]
           snap-start
-          snap-stop-always
           overflow-hidden
           flex
           flex-col
@@ -76,6 +75,7 @@ export default function Pages() {
 
           <CouplesName />
 
+
         </div>
 
 
@@ -92,10 +92,8 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-full
-          min-h-[100dvh]
+          h-[100dvh]
           snap-start
-          snap-stop-always
           overflow-hidden
         "
       >
@@ -114,10 +112,8 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-full
-          min-h-[100dvh]
+          h-[100dvh]
           snap-start
-          snap-stop-always
           overflow-hidden
         "
       >
@@ -136,10 +132,8 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-full
-          min-h-[100dvh]
+          h-[100dvh]
           snap-start
-          snap-stop-always
           overflow-hidden
         "
       >
@@ -158,10 +152,8 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-full
-          min-h-[100dvh]
+          h-[100dvh]
           snap-start
-          snap-stop-always
           overflow-hidden
         "
       >

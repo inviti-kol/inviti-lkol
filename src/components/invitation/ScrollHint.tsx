@@ -7,10 +7,21 @@ export default function ScrollHint() {
 
   function scrollDown(){
 
-    window.scrollBy({
-      top: window.innerHeight,
-      behavior:"smooth"
-    })
+    const container = document.querySelector(
+      ".pages-scroll"
+    )
+
+    if(container){
+
+      container.scrollBy({
+
+        top: container.clientHeight,
+
+        behavior:"smooth"
+
+      })
+
+    }
 
   }
 
@@ -50,6 +61,7 @@ export default function ScrollHint() {
         اسحب للأسفل
       </span>
 
+
       <div
         className="
           w-3
@@ -61,6 +73,7 @@ export default function ScrollHint() {
           mt-2
         "
       />
+
 
     </motion.button>
 
