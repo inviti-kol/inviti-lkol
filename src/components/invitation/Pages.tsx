@@ -38,7 +38,7 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
           snap-start
           overflow-hidden
           flex
@@ -93,10 +93,9 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
           snap-start
           overflow-hidden
-          bottom-15
         "
       >
 
@@ -114,7 +113,7 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
           snap-start
           overflow-hidden
         "
@@ -134,7 +133,7 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
           snap-start
           overflow-hidden
         "
@@ -154,7 +153,7 @@ export default function Pages() {
         className="
           relative
           w-full
-          h-[100dvh]
+          h-full
           snap-start
           overflow-hidden
         "
