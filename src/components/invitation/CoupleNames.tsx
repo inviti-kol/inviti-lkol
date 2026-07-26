@@ -42,7 +42,7 @@ export default function CouplesName() {
 
 
       <span className="couple-separator">
-        &
+        ✦
       </span>
 
 
