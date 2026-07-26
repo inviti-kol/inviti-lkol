@@ -58,20 +58,22 @@ body {
 
 .names-gold {
 
-    font-family:'Scheherazade New', serif;
+    font-family: var(--font-amiri), serif;
 
-    font-size:clamp(32px,9vw,42px);
+    font-size: clamp(38px, 10vw, 52px);
 
     font-weight:700;
+
+    letter-spacing:2px;
 
 
     background:linear-gradient(
         90deg,
-        #FFF8D9 0%,
-        #EBC96D 30%,
-        #B9842F 50%,
-        #EBC96D 70%,
-        #FFF8D9 100%
+        #fff6d5,
+        #e8c56a,
+        #b88635,
+        #e8c56a,
+        #fff6d5
     );
 
 
@@ -84,14 +86,15 @@ body {
     -webkit-text-fill-color:transparent;
 
 
-    animation:shimmerText 3s linear infinite;
+    animation:
+      shimmerText 4s linear infinite;
 
 
     text-shadow:
 
-        0 2px 6px rgba(0,0,0,0.35),
+      0 3px 8px rgba(0,0,0,0.45),
 
-        0 0 18px rgba(199,154,62,0.18);
+      0 0 20px rgba(232,197,106,0.35);
 
 
     display:block;
@@ -121,13 +124,14 @@ body {
 
 .couple-separator {
 
-    font-family:'Scheherazade New',serif;
+    font-family:var(--font-amiri),serif;
 
-    font-size:40px;
+    font-size:32px;
 
-    color:rgba(255,245,225,0.75);
+    color:#d6b878;
 
-    -webkit-text-fill-color:rgba(255,245,225,0.75);
+    text-shadow:
+      0 2px 8px rgba(0,0,0,0.4);
 
 }
 

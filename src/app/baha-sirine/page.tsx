@@ -1,5 +1,5 @@
 import BookInvitation from "@/components/invitation/BookInvitation"
-
+import "@/style/invitation.css";
 export default async function Invitation({
   params,
 }: {

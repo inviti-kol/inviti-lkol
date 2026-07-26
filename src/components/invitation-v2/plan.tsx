@@ -136,7 +136,7 @@ export default function Plan() {
       bg-center
     "
     style={{
-      backgroundImage: "url('/images/plan.jpg')"
+      backgroundImage: "url('/images/invitation/plan2.jpg')"
     }}
   />
 

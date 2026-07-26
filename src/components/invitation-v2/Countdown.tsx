@@ -137,7 +137,7 @@ export default function Countdown() {
   "
 
   style={{
-    backgroundImage:"url('/images/countdown-bg.jpg')"
+    backgroundImage:"url('/images/invitation/countdwon2.jpg')"
   }}
 
   initial={{

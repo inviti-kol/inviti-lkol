@@ -48,46 +48,29 @@ export default function Background() {
       {/* FOTO DE FONDO */}
 
 
-      <motion.div
+      <motion.video
 
+  className="
+    absolute
+    inset-0
+    w-full
+    h-full
+    object-cover
+  "
 
-        className="
-          absolute
-          inset-0
-          bg-cover
-          bg-center
-        "
+  src="/images/invitation/bg.mp4"
 
+  autoPlay
 
-        style={{
+  muted
 
-          backgroundImage:
-          "url('/images/bg.jpg')"
+  loop
 
-        }}
+  playsInline
 
+  
 
-        animate={{
-
-          scale:[1,1.08,1]
-
-        }}
-
-
-        transition={{
-
-          duration:25,
-
-          repeat:Infinity,
-
-          repeatType:"reverse",
-
-          ease:"easeInOut"
-
-        }}
-
-
-      />
+/>
 
 
 
