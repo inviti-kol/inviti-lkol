@@ -32,13 +32,13 @@ export default function ScrollHint({
 
   const textColor =
     color === "light"
-      ? "text-[#EDEBB7]"
+      ? "text-[#FCEEB1]"
       : "text-[#3d2020]"
 
 
   const borderColor =
     color === "light"
-      ? "border-[#EDEBB7]"
+      ? "border-[#FCEEB1]"
       : "border-[#3d2020]"
 
 
