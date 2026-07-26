@@ -62,7 +62,7 @@ export default function Pages() {
             flex-col
             items-center
             justify-center
-            bottom-15
+            
           "
         >
 
