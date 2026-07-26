@@ -30,7 +30,7 @@ export default function BookInvitation() {
 
     setTimeout(() => {
       setPagesVisible(true)
-    }, 900)
+    }, 500)
 
   }
 
@@ -197,7 +197,7 @@ text-sm
                   }}
 
                   transition={{
-                    duration: 0.3
+                    duration: 0.8
                   }}
 
                 >
