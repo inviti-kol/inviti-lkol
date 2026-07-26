@@ -24,7 +24,8 @@ export default function Pages() {
         h-full
         overflow-y-auto
         snap-y
-        snap-mandatory
+        snap-proximity
+        overscroll-contain
       "
     >
 
@@ -35,6 +36,7 @@ export default function Pages() {
           w-full
           h-[100dvh]
           snap-start
+          touch-pan-y
           overflow-hidden
           flex
           flex-col
@@ -88,6 +90,7 @@ export default function Pages() {
           w-full
           h-[100dvh]
           snap-start
+          touch-pan-y
           overflow-hidden
         "
       >
@@ -102,13 +105,14 @@ export default function Pages() {
 
 
       <section
-className="
-relative
-w-full
-h-full
-snap-start
-overflow-hidden
-"
+        className="
+        relative
+        w-full
+        h-full
+        snap-start
+        touch-pan-y
+        overflow-hidden
+        "
 >
 
         <Plan />
@@ -123,6 +127,7 @@ overflow-hidden
   w-full
   h-[100dvh]
   snap-start
+  touch-pan-y
   overflow-hidden
   "
 >
@@ -138,6 +143,7 @@ overflow-hidden
   w-full
   h-[100dvh]
   snap-start
+  touch-pan-y
   overflow-hidden
   "
 >
