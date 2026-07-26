@@ -16,7 +16,7 @@ export default function BookInvitation() {
 
       setLoading(false)
 
-    }, 2000)
+    }, 400)
 
 
     return () => clearTimeout(timer)
