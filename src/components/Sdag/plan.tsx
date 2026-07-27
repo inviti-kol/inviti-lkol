@@ -39,25 +39,23 @@ export default function Plan() {
       />
 
       <div
-        className="
-          relative
-          z-10
-          flex
-          items-center
-          justify-center
-          min-h-full
-          px-6
-          py-12
-        "
-      >
+  className="
+    relative
+    z-10
+    flex
+    items-center
+    justify-center
+    h-full
+    px-6
+  "
+>
         <div
-         className="
-          w-full
-          max-w-md
-          px-8
-          py-10
-        "
-        >
+ className="
+  w-full
+  max-w-md
+  px-6
+ "
+>
           <div
             className="
               flex
