@@ -84,8 +84,10 @@ export default function Plan() {
                   size={16}
                   className="
                     absolute
-                    -right-3
-                    -bottom-2
+                    -right-1
+                    -bottom-0
+                    -top-0
+                    
                   "
                 />
               </div>
@@ -98,6 +100,7 @@ export default function Plan() {
               text-sm
               tracking-[4px]
               text-[#a78958]
+              mt-3
             "
           >
             20 / 12 / 2026
