@@ -60,7 +60,6 @@ export default function Plan() {
             className="
               flex
               justify-center
-              mb-6
             "
           >
             <div
