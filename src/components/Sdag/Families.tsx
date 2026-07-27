@@ -84,7 +84,7 @@ dir="rtl"
 
 <div className="invite-message -translate-y-6">
 
-بدعوتكم لحضور حفل زفاف نجليهما
+بدعوتكم لحضور حفل زفاف ابنيهما
 
 </div>
 
