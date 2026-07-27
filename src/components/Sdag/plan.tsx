@@ -189,7 +189,7 @@ export default function Plan() {
           />
 
           <a
-            href=""
+            href="https://maps.google.es/"
             target="_blank"
             rel="noopener noreferrer"
             className="
