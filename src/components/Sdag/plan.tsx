@@ -14,7 +14,7 @@ export default function Plan() {
         relative
         w-full
         h-full
-        overflow-y-auto
+        overflow-hiden
       "
       dir="rtl"
     >
