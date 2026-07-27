@@ -1,0 +1,599 @@
+.verse {
+    font-family: var(--font-amiri), serif;
+    font-size: 16px;
+    color: #f0ebe5;
+    text-align: center;
+    line-height: 1.9;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45),
+        0 1px 3px rgba(0, 0, 0, 0.55);
+
+    margin-top: 18px;
+    margin-bottom: 28px;
+
+    padding: 14px 20px;
+
+    border-top: 1px solid rgba(255, 250, 240, 0.55);
+    border-bottom: 1px solid rgba(255, 250, 240, 0.55);
+}
+
+
+.verse-divider {
+
+  width:180px;
+  height:1px;
+  flex-shrink:0;
+
+  background:linear-gradient(
+    to right,
+    transparent,
+    #000000,
+    transparent
+  );
+
+}
+
+
+html,
+body {
+
+    min-height:100%;
+    margin:0;
+
+}
+
+
+body {
+
+    background-image:url("/images/bg.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+}
+
+
+
+.names-gold {
+
+    font-family: var(--font-amiri), serif;
+
+    font-size: clamp(38px, 10vw, 52px);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+
+    background:linear-gradient(
+        90deg,
+        #fff6d5,
+        #e8c56a,
+        #b88635,
+        #e8c56a,
+        #fff6d5
+    );
+
+
+    background-size:200% auto;
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+
+
+    animation:
+      shimmerText 4s linear infinite;
+
+
+    text-shadow:
+
+      0 3px 8px rgba(0,0,0,0.45),
+
+      0 0 20px rgba(232,197,106,0.35);
+
+
+    display:block;
+
+}
+
+
+
+@keyframes shimmerText {
+
+    0% {
+
+        background-position:-200% center;
+
+    }
+
+
+    100% {
+
+        background-position:200% center;
+
+    }
+
+}
+
+
+
+.couple-separator {
+
+    font-family:'Scheherazade New',serif;
+
+    font-size:40px;
+
+    color:rgba(255,245,225,0.75);
+
+    -webkit-text-fill-color:rgba(255,210,131,0.8);
+
+}
+
+
+
+.families-row {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:18px 0 8px;
+
+}
+
+
+
+.family-block {
+
+    text-align:center;
+
+    flex:1;
+
+}
+
+
+
+.family-label {
+
+    font-family:var(--font-amiri),serif;
+
+    font-size:19px;
+
+    color:rgba(248,240,255,0.95);
+
+    text-shadow:
+        0 1px 8px rgba(0,0,0,0.6);
+
+    margin-bottom:3px;
+
+}
+
+
+
+.family-name {
+
+    font-family:var(--font-amiri),serif;
+
+    font-size:clamp(15px,5vw,19px);
+
+    color:rgba(248,240,255,0.95);
+
+    font-weight:700;
+
+    text-shadow:
+
+        0 2px 8px rgba(0,0,0,0.45),
+
+        0 1px 3px rgba(0,0,0,0.55);
+
+}
+
+.family-lastname {
+
+  font-family: var(--font-amiri), serif;
+
+  font-size: clamp(14px,4vw,17px);
+
+  color: rgba(248,240,255,0.85);
+
+  font-weight:700;
+
+  margin-top:2px;
+
+  text-shadow:
+    0 1px 6px rgba(0,0,0,0.45);
+
+}
+
+.and-symbol {
+
+    font-family:var(--font-amiri),serif;
+
+    font-size:28px;
+
+    color:rgba(255,245,225,0.75);
+
+    flex:0 0 auto;
+
+}
+
+
+
+.invitation-text {
+
+    font-family:var(--font-amiri),serif;
+
+    font-size:clamp(18px,5vw,22px);
+
+    color:rgba(248,240,255,0.95);
+
+    font-weight:700;
+
+    text-align:center;
+
+    line-height:1.9;
+
+    text-shadow:
+
+        0 2px 8px rgba(0,0,0,0.45),
+
+        0 1px 3px rgba(0,0,0,0.55);
+
+}
+
+
+
+.invite-message {
+
+    width:100%;
+
+    margin-top:24px;
+
+    font-family:var(--font-amiri),serif;
+
+    font-size:18px;
+
+    color:rgba(248,240,255,0.95);
+
+    font-weight:700;
+
+    text-align:center;
+
+    text-shadow:
+
+        0 2px 8px rgba(0,0,0,0.45),
+
+        0 1px 3px rgba(0,0,0,0.55);
+
+}
+
+
+
+.closing-section {
+
+    position:relative;
+
+}
+
+
+
+.gold-line {
+
+    width:100px;
+
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #af9b6a,
+        transparent
+    );
+
+    animation:shimmer 3s infinite;
+
+}
+
+
+
+.closing-names {
+
+    font-family: var(--font-amiri), serif;
+
+    font-size: clamp(38px, 10vw, 52px);
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+
+    background:linear-gradient(
+        90deg,
+        #fff6d5,
+        #e8c56a,
+        #b88635,
+        #e8c56a,
+        #fff6d5
+    );
+
+
+    background-size:200% auto;
+
+    background-clip:text;
+    -webkit-background-clip:text;
+
+    color:transparent;
+    -webkit-text-fill-color:transparent;
+
+
+    animation:
+      shimmerText 10s linear infinite;
+
+
+    display:block;
+
+}
+
+
+
+
+.closing-text {
+
+    margin-top:24px;
+
+    font-family:var(--font-amiri),serif;
+
+    font-size:clamp(20px,5vw,28px);
+
+    font-weight:700;
+
+    color:#5a4030;
+
+    line-height:2;
+
+    text-shadow:
+
+        0 1px 5px rgba(0,0,0,0.15);
+
+}
+
+
+.closing-icon {
+
+    width:clamp(80px,28vw,120px);
+
+    height:auto;
+
+    object-fit:contain;
+
+    margin-top:15px;
+
+
+    filter:
+    drop-shadow(0 4px 16px rgba(0,0,0,.25));
+
+}
+
+
+
+@keyframes shimmer {
+
+    0% {
+
+        opacity:.3;
+
+    }
+
+
+    50% {
+
+        opacity:1;
+
+    }
+
+
+    100% {
+
+        opacity:.3;
+
+    }
+
+}
+
+
+
+@keyframes goldMove {
+
+    0% {
+
+        background-position:0% center;
+
+    }
+
+
+    100% {
+
+        background-position:200% center;
+
+    }
+
+}
+
+
+
+.falling-flowers {
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+
+
+.falling-flowers img {
+
+    position:absolute;
+
+    top:-120px;
+
+    width:70px;
+
+    opacity:.75;
+
+    animation:flowerFall linear infinite;
+
+}
+
+
+
+.falling-flowers img:nth-child(1){
+
+    left:5%;
+
+    animation-duration:10s;
+
+}
+
+
+
+.falling-flowers img:nth-child(2){
+
+    left:25%;
+
+    width:90px;
+
+    animation-duration:13s;
+
+    animation-delay:2s;
+
+}
+
+
+
+.falling-flowers img:nth-child(3){
+
+    left:50%;
+
+    width:60px;
+
+    animation-duration:11s;
+
+    animation-delay:1s;
+
+}
+
+
+
+.falling-flowers img:nth-child(4){
+
+    left:70%;
+
+    width:85px;
+
+    animation-duration:14s;
+
+    animation-delay:3s;
+
+}
+
+
+
+.falling-flowers img:nth-child(5){
+
+    left:90%;
+
+    width:65px;
+
+    animation-duration:12s;
+
+    animation-delay:4s;
+
+}
+
+
+
+@keyframes flowerFall {
+
+    0% {
+
+        transform:translateY(-120px) rotate(0deg);
+
+    }
+
+
+    50% {
+
+        transform:
+        translateY(50vh)
+        translateX(40px)
+        rotate(180deg);
+
+    }
+
+
+    100% {
+
+        transform:
+        translateY(120vh)
+        translateX(-40px)
+        rotate(360deg);
+
+    }
+
+}
+
+
+
+.falling-flower {
+
+    position:absolute;
+
+    top:-80px;
+
+    opacity:0.85;
+
+    animation-name:flowerFall;
+
+    animation-timing-function:linear;
+
+    animation-iteration-count:infinite;
+
+}
+
+.closing-message {
+
+    font-family: var(--font-amiri), serif;
+
+    font-size: clamp(18px, 5vw, 24px);
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:#b88635;
+
+    line-height:2;
+
+    text-align:center;
+
+    display:block;
+
+}
