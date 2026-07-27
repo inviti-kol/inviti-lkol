@@ -47,6 +47,7 @@ export default function Plan() {
     justify-center
     h-full
     px-6
+    translate-y-[-6%]
   "
 >
         <div
