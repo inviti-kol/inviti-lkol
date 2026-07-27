@@ -217,7 +217,7 @@ export default function Plan() {
 
           <div
             className="
-              mt-10
+              mt-5
               text-center
             "
           >
