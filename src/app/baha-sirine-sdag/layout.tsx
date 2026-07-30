@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   title: "Sdag Baha & Sirine",
 
   description: "Invitación digital",
+  icons: {
+  icon: "/images/bs.svg",
+},
 
 };
 
