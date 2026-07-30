@@ -26,6 +26,33 @@ export default function BookInvitation() {
     return () => clearTimeout(timer)
 
   }, [])
+  useEffect(() => {
+
+  function handleVisibility() {
+
+    if (!audioRef.current) return
+
+    if (document.hidden) {
+
+      audioRef.current.pause()
+
+    } else if (open && !muted) {
+
+      audioRef.current.play().catch(() => {})
+
+    }
+
+  }
+
+  document.addEventListener("visibilitychange", handleVisibility)
+
+  return () => {
+
+    document.removeEventListener("visibilitychange", handleVisibility)
+
+  }
+
+}, [open, muted])
   function openBook() {
 
     if (open) return
