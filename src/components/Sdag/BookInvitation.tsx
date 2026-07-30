@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Pages from "./Pages"
+import { Volume2, VolumeX } from "lucide-react"
 
 
 export default function BookInvitation() {
@@ -10,6 +11,9 @@ export default function BookInvitation() {
   const [open, setOpen] = useState(false)
   const [pagesVisible, setPagesVisible] = useState(false)
   const [loading, setLoading] = useState(true)
+  const audioRef = useRef<HTMLAudioElement>(null)
+  const [muted, setMuted] = useState(false)
+
   useEffect(() => {
 
     const timer = setTimeout(() => {
@@ -27,7 +31,7 @@ export default function BookInvitation() {
     if (open) return
 
     setOpen(true)
-
+audioRef.current?.play()
     setTimeout(() => {
       setPagesVisible(true)
     }, 500)
@@ -66,7 +70,44 @@ export default function BookInvitation() {
         "
 
       >
+{open && (
+  <button
+    onClick={(e) => {
+      e.stopPropagation()
 
+      setMuted((value) => {
+        const next = !value
+
+        if (audioRef.current) {
+          audioRef.current.muted = next
+        }
+
+        return next
+      })
+    }}
+    className="
+      absolute
+      top-10%
+      right-10%
+      z-[200]
+      w-11
+      h-11
+      rounded-full
+      bg-white/90
+      border
+      border-[#d8c49a]
+      shadow-lg
+      flex
+      items-center
+      justify-center
+      text-[#7d5d2d]
+      transition
+      hover:scale-105
+    "
+  >
+    {muted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+  </button>
+)}
         <div
 
 
@@ -364,6 +405,17 @@ text-sm
         </div>
 
       </div>
+<audio
+  ref={audioRef}
+  loop
+  playsInline
+  muted={muted}
+>
+  <source
+    src="/music/music.mp3"
+    type="audio/mpeg"
+  />
+</audio>
 
     </main>
 
