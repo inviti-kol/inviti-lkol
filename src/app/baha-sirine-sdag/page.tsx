@@ -3,7 +3,7 @@ import BookInvitation from "@/components/Sdag/BookInvitation"
 import "@/style/Sdag.css"
 
 export const metadata: Metadata = {
-  title: "دعوة زفاف بهاء وسيرين",
+  title: "دعوة عقد القران بهاء وسيرين",
   description: "يسرنا دعوتكم لمشاركتنا فرحتنا.",
 
   openGraph: {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "InvitiKol",
     images: [
       {
-        url: "/images/bs.svg", // o b&s.svg si no lo renombras
+        url: "https://inviti-lkol.netlify.app/images/bs.svg", // o b&s.svg si no lo renombras
         width: 512,
         height: 512,
         alt: "B&S",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "دعوة زفاف بهاء وسيرين",
+    title: "دعوة عقد القران بهاء وسيرين",
     description: "يسرنا دعوتكم لمشاركتنا فرحتنا.",
-    images: ["/images/bs.svg"],
+    images: ["https://inviti-lkol.netlify.app/images/bs.svg"],
   },
 }
 
