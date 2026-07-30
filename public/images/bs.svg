@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Subtle emboss / letterpress filter -->
+    <filter id="emboss" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="blur"/>
+      <feOffset in="blur" dx="1.2" dy="1.2" result="shadow"/>
+      <feFlood flood-color="#7a5518" flood-opacity="0.14" result="sc"/>
+      <feComposite in="sc" in2="shadow" operator="in" result="shadowOut"/>
+      <feOffset in="blur" dx="-0.8" dy="-0.8" result="light"/>
+      <feFlood flood-color="#ffffff" flood-opacity="0.32" result="lc"/>
+      <feComposite in="lc" in2="light" operator="in" result="lightOut"/>
+      <feMerge>
+        <feMergeNode in="shadowOut"/>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="lightOut"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle inner glow for the border -->
+    <filter id="borderGlow" x="-2%" y="-2%" width="104%" height="104%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="6" y="6" width="500" height="500" rx="20" ry="20" fill="#efe6d6"/>
+
+  <!-- Main border -->
+  <rect x="6" y="6" width="500" height="500" rx="20" ry="20"
+        fill="none" stroke="#b88635" stroke-width="2.8"/>
+
+  <!-- Inner decorative border — luxury double-line effect -->
+  <rect x="21" y="21" width="470" height="470" rx="13" ry="13"
+        fill="none" stroke="#b88635" stroke-width="0.55" opacity="0.30"/>
+
+  <!-- ═══ Thin ornamental line ABOVE text ═══ -->
+  <line x1="176" y1="193" x2="336" y2="193"
+        stroke="#b88635" stroke-width="0.7" opacity="0.40"/>
+  <!-- tiny end-dots -->
+  <circle cx="176" cy="193" r="1.6" fill="#b88635" opacity="0.32"/>
+  <circle cx="336" cy="193" r="1.6" fill="#b88635" opacity="0.32"/>
+
+  <!-- ═══ Thin ornamental line BELOW text ═══ -->
+  <line x1="176" y1="335" x2="336" y2="335"
+        stroke="#b88635" stroke-width="0.7" opacity="0.40"/>
+  <!-- tiny end-dots -->
+  <circle cx="176" cy="335" r="1.6" fill="#b88635" opacity="0.32"/>
+  <circle cx="336" cy="335" r="1.6" fill="#b88635" opacity="0.32"/>
+
+  <!-- ═══ Small diamond centrepiece — top ═══ -->
+  <polygon points="256,186 259.5,193 256,200 252.5,193"
+           fill="#b88635" opacity="0.28"/>
+
+  <!-- ═══ Small diamond centrepiece — bottom ═══ -->
+  <polygon points="256,328 259.5,335 256,342 252.5,335"
+           fill="#b88635" opacity="0.28"/>
+
+  <!-- ══════════════ MONOGRAM  B & S ══════════════ -->
+  <text x="256" y="298"
+        text-anchor="middle"
+        font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', Palatino, 'Times New Roman', serif"
+        fill="#b88635"
+        filter="url(#emboss)"
+        letter-spacing="3">
+    <tspan font-size="156" font-weight="normal">B</tspan>
+    <tspan font-size="96"  font-style="italic" dx="-6" dy="2">&amp;</tspan>
+    <tspan font-size="156" font-weight="normal" dx="-6" dy="-2">S</tspan>
+  </text>
+</svg>
