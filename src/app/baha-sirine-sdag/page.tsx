@@ -11,13 +11,12 @@ export const metadata: Metadata = {
     title: "دعوة عقد القران بهاء وسيرين",
     description:
       "يسرنا دعوتكم لحضور عقد قران بهاء وسيرين ومشاركتنا هذه المناسبة السعيدة، حضوركم يزيد فرحتنا ويشرفنا.",
-    url: "https://inviti-lkol.netlify.app/baha-sirine-sdag",
     siteName: "InvitiKol",
     locale: "ar",
     type: "website",
     images: [
       {
-        url: "https://inviti-lkol.netlify.app/images/bs_2.png?=v1",
+        url: "/images/bs_2.png?=v1",
         width: 1200,
         height: 630,
         alt: "دعوة عقد القران بهاء وسيرين",
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "يسرنا دعوتكم لحضور عقد قران بهاء وسيرين ومشاركتنا هذه المناسبة السعيدة، حضوركم يزيد فرحتنا ويشرفنا.",
     images: [
-      "https://inviti-lkol.netlify.app/images/bs_2.png?=v1",
+      "/images/bs_2.png?=v1",
     ],
   },
 }
