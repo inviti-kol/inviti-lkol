@@ -40,8 +40,11 @@ export const metadata: Metadata = {
 
   description: "Invitación digital",
   icons: {
-  icon: "/images/bs.svg",
-},
+    icon: "/images/bs.svg",
+    shortcut: "/images/bs.svg",
+    apple: "/images/bs.svg",
+  },
+
 
 };
 
