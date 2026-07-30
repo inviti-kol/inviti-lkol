@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://inviti-lkol.netlify.app/images/b_s.png?v=1",
+        url: "https://inviti-lkol.netlify.app/images/bs_2.png",
         width: 1200,
         height: 630,
         alt: "دعوة عقد القران بهاء وسيرين",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "يسرنا دعوتكم لحضور عقد قران بهاء وسيرين ومشاركتنا هذه المناسبة السعيدة، حضوركم يزيد فرحتنا ويشرفنا.",
     images: [
-      "https://inviti-lkol.netlify.app/images/b_s.png?v=1",
+      "https://inviti-lkol.netlify.app/images/bs_2.png",
     ],
   },
 }
