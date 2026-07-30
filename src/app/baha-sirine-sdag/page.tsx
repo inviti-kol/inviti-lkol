@@ -7,17 +7,17 @@ export const metadata: Metadata = {
   description: "يسرنا دعوتكم لمشاركتنا فرحتنا.",
 
   openGraph: {
-    title: "دعوة زفاف بهاء وسيرين",
+    title: "دعوة عقد القران بهاء وسيرين",
     description: "يسرنا دعوتكم لمشاركتنا فرحتنا.",
     url: "https://inviti-lkol.netlify.app/baha-sirine-sdag",
     siteName: "InvitiKol",
     images: [
-      {
-        url: "https://inviti-lkol.netlify.app/images/bs.svg", // o b&s.svg si no lo renombras
-        width: 512,
-        height: 512,
-        alt: "B&S",
-      },
+  {
+    url: "https://inviti-lkol.netlify.app/images/bs.png",
+    width: 1200,
+    height: 630,
+    alt: "B&S",
+  },
     ],
     locale: "ar",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "دعوة عقد القران بهاء وسيرين",
     description: "يسرنا دعوتكم لمشاركتنا فرحتنا.",
-    images: ["https://inviti-lkol.netlify.app/images/bs.svg"],
+    images: ["https://inviti-lkol.netlify.app/images/bs.png"],
   },
 }
 
